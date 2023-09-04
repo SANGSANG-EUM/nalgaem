@@ -41,9 +41,9 @@ if($config['add_meta'])
     echo $config['add_meta'].PHP_EOL;
 ?>
 <title><?php echo $bv_head_title; ?></title>
-<link rel="stylesheet" href="<?php echo BV_CSS_URL; ?>/default.css?ver=<?php echo BV_CSS_VER;?>">
+<!-- <link rel="stylesheet" href="<?php echo BV_CSS_URL; ?>/default.css?ver=<?php echo BV_CSS_VER;?>"> -->
 <?php if(defined('BV_THEME_URL')) { ?>
-<link rel="stylesheet" href="<?php echo BV_THEME_URL; ?>/style.css?ver=<?php echo BV_CSS_VER;?>">
+<!-- <link rel="stylesheet" href="<?php echo BV_THEME_URL; ?>/style.css?ver=<?php echo BV_CSS_VER;?>"> -->
 <?php } ?>
 <?php if($ico = display_logo_url('favicon_ico')) { // 파비콘 ?>
 <link rel="shortcut icon" href="<?php echo $ico; ?>" type="image/x-icon">
@@ -63,6 +63,21 @@ var bv_cookie_domain = "<?php echo BV_COOKIE_DOMAIN; ?>";
 <script src="<?php echo BV_JS_URL; ?>/jquery-ui-1.10.3.custom.js"></script>
 <script src="<?php echo BV_JS_URL; ?>/common.js?ver=<?php echo BV_JS_VER;?>"></script>
 <script src="<?php echo BV_JS_URL; ?>/slick.js"></script>
+
+<!-- 20230907 강호수 추가 -->
+<link rel="stylesheet" href="/source/plugin/fullpage/jquery.fullpage.css">
+<link rel="stylesheet" href="/source/plugin/swiper/swiper-bundle.min.css">
+<link rel="stylesheet" href="/source/css/fonts.css">
+<link rel="stylesheet" href="/source/css/common.css">
+<link rel="stylesheet" href="/source/css/normal.css">
+<link rel="stylesheet" href="/source/css/responisve.css">
+
+<script src="/source/js/jquery-3.7.0.min.js"></script>
+<script src="/source/plugin/fullpage/jquery.fullpage.js"></script>
+<script src="/source/plugin/matchheight/jquery.matchHeight.js"></script>
+<script src="/source/plugin/swiper/swiper-bundle.min.js"></script>
+<script src="/source/js/normal.js"></script>
+
 <?php if($config['mouseblock_yes']) { // 마우스 우클릭 방지 ?>
 <script>
 $(document).ready(function(){
