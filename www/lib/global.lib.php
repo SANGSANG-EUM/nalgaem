@@ -57,9 +57,9 @@ function get_paging($write_pages, $cur_page, $total_page, $url, $add="")
 
     $str = '';
 	if($cur_page < 2) {
-		$str .= '<span class="pg_start">처음</span>'.PHP_EOL;
+		$str .= '<span class="pg_start"><img src="/source/img/icon-paging_start.png" alt="처음"></span>'.PHP_EOL;
 	} else {
-		$str .= '<a href="'.$url.'1'.$add.'" class="pg_page pg_start">처음</a>'.PHP_EOL;
+		$str .= '<a href="'.$url.'1'.$add.'" class="pg_page pg_start"><img src="/source/img/icon-paging_start.png" alt="처음"></a>'.PHP_EOL;
 	}
 
 	$start_page = (((int)(($cur_page - 1 ) / $write_pages)) * $write_pages) + 1;
@@ -68,31 +68,31 @@ function get_paging($write_pages, $cur_page, $total_page, $url, $add="")
 	if($end_page >= $total_page) $end_page = $total_page;
 
 	if($start_page > 1) {
-		$str .= '<a href="'.$url.($start_page-1).$add.'" class="pg_page pg_prev">이전</a>'.PHP_EOL;
+		$str .= '<a href="'.$url.($start_page-1).$add.'" class="pg_page pg_prev"><img src="/source/img/icon-cal_prev.png" alt="이전"></a>'.PHP_EOL;
 	} else {
-		$str .= '<span class="pg_prev">이전</span>'.PHP_EOL;
+		$str .= '<span class="pg_prev"><img src="/source/img/icon-cal_prev.png" alt="이전"></span>'.PHP_EOL;
 	}
 
     if($total_page > 1) {
         for($k=$start_page;$k<=$end_page;$k++) {
             if($cur_page != $k) {
-                $str .= '<a href="'.$url.$k.$add.'" class="pg_page">'.$k.'<span class="sound_only">페이지</span></a>'.PHP_EOL;
+                $str .= '<a href="'.$url.$k.$add.'" class="pg_page pg_num">'.$k.'<span class="sound_only">페이지</span></a>'.PHP_EOL;
             } else {
-                $str .= '<span class="sound_only">열린</span><strong class="pg_current">'.$k.'</strong><span class="sound_only">페이지</span>'.PHP_EOL;
+                $str .= '<span class="sound_only">열린</span><strong class="pg_current pg_num">'.$k.'</strong><span class="sound_only">페이지</span>'.PHP_EOL;
 			}
         }
     }
 
 	if($total_page > $end_page) {
-		$str .= '<a href="'.$url.($end_page+1).$add.'" class="pg_page pg_next">다음</a>'.PHP_EOL;
+		$str .= '<a href="'.$url.($end_page+1).$add.'" class="pg_page pg_next"><img src="/source/img/icon-cal_next.png" alt="다음"></a>'.PHP_EOL;
 	} else {
-		$str .= '<span class="pg_next">다음</span>'.PHP_EOL;
+		$str .= '<span class="pg_next"><img src="/source/img/icon-cal_next.png" alt="다음"></span>'.PHP_EOL;
 	}
 
 	if($cur_page < $total_page) {
-		$str .= '<a href="'.$url.$total_page.$add.'" class="pg_page pg_end">맨끝</a>'.PHP_EOL;
+		$str .= '<a href="'.$url.$total_page.$add.'" class="pg_page pg_end"><img src="/source/img/icon-paging_end.png" alt="맨끝"></a>'.PHP_EOL;
 	} else {
-		$str .= '<span class="pg_end">맨끝</span>'.PHP_EOL;
+		$str .= '<span class="pg_end"><img src="/source/img/icon-paging_end.png" alt="맨끝"></span>'.PHP_EOL;
 	}
 
     return "<nav class=\"pg_wrap\"><span class=\"pg\">{$str}</span></nav>";

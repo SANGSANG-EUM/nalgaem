@@ -89,7 +89,16 @@ $agree  = preg_replace('#[^0-9]#', '', $agree);
 $agree2 = preg_replace('#[^0-9]#', '', $agree2);
 
 $register_action_url = BV_HTTPS_BBS_URL.'/register_form_update.php';
-include_once(BV_THEME_PATH.'/register_form.skin.php');
+
+
+// 20230912 강호수 : 회원가입, 회원정보수정 폼 분리
+// include_once(BV_THEME_PATH.'/register_form.skin.php');
+
+if($w == ""){ // 신규가입이라면...
+	include_once(BV_THEME_PATH.'/register_form.skin.php');
+}else{ // 회원이 정보수정을 하는 상태라면
+	include_once(BV_THEME_PATH.'/register_form.skin_edit.php');
+}
 
 include_once("./_tail.php");
 ?>

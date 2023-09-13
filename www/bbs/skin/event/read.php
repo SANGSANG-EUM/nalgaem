@@ -9,6 +9,7 @@ if(!defined('_BLUEVATION_')) exit;
 			<div class="nalgaem-read-subj"><?php echo $bo_subject; ?></div>
 			<div class="nalgaem-read-info">
 				<p class="nalgaem-read-date"><?php echo $bo_wdate; ?></p>
+				<p class="nalgaem-read-share"><a href=""><img src="/source/img/icon-share.png" alt="">공유하기</a></p>
 			</div>
 		</div>
 		<!-- <tr>

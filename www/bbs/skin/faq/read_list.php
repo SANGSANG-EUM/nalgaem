@@ -141,11 +141,11 @@ if($board['read_list']=='1') {
 
 <div class="page_wrap">
 	<div class="lbt_box">
-		<a href="./list.php?<?php echo $qstr1; ?>" class="btn_lsmall bx-white">목록</a>
+		<a href="./list.php?<?php echo $qstr1; ?>" class="btn_large bx-white">목록</a>
 	</div>
 	<?php if($member['grade'] <= $board['write_priv']) { ?>
 	<div class="rbt_box">
-		<a href="./write.php?boardid=<?php echo $boardid; ?>" class="btn_lsmall">글쓰기</a>
+		<a href="./write.php?boardid=<?php echo $boardid; ?>" class="btn_large">글쓰기</a>
 	</div>
 	<?php } ?>
 </div>
@@ -161,7 +161,7 @@ if($board['read_list']=='1') {
 	?>
 	</select>
 	<input type="text" name="stx" class="frm_input" value="<?php echo $stx; ?>">
-	<input type="submit" value="검색" class="btn_lsmall grey">
+	<input type="submit" value="검색" class="btn_large grey">
 </div>
 </form>
 

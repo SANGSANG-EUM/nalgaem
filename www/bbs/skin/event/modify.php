@@ -1,18 +1,18 @@
 <?php
 if(!defined('_BLUEVATION_')) exit;
-
 include_once(BV_PATH.'/include/board_category.php');
 ?>
 
 <div class="subwr write">
-
 	<!-- 게시판 분류 { -->	
-	<?php boardCategory(0); ?>
+		<?php boardCategory(1); ?>
 	<!-- } 게시판 분류 -->
-
 	<form name="fboardform" id="fboardform" method="post" action="<?php echo $from_action_url; ?>" onsubmit="return fboardform_submit(this);" autocomplete="off" enctype="MULTIPART/FORM-DATA">
-	<input type="hidden" name="mode" value="w">
+	<input type="hidden" name="index_no" value="<?php echo $index_no; ?>">
 	<input type="hidden" name="boardid" value="<?php echo $boardid; ?>">
+	<input type="hidden" name="sfl" value="<?php echo $sfl; ?>">
+	<input type="hidden" name="stx" value="<?php echo $stx; ?>">
+	<input type="hidden" name="page" value="<?php echo $page; ?>">
 	<input type="hidden" name="token" value="<?php echo $token; ?>">
 	
 	<div class="tbl_frm01 tbl_wrap">
@@ -27,18 +27,18 @@ include_once(BV_PATH.'/include/board_category.php');
 			<td>
 				<?php
 				if($is_member) {
-					echo $member['name'];
-					echo "<input type=\"hidden\" name=\"writer_s\" value=\"$member[name]\">";
+					echo $write['writer_s'];
+					echo "<input type=\"hidden\" name=\"writer_s\" value=\"$write[writer_s]\">";
 				} else {
-					echo "<input type=\"text\" name=\"writer_s\" class=\"frm_input\">";
+					echo "<input type=\"text\" name=\"writer_s\" value=\"$write[writer_s]\" class=\"frm_input\">";
 				}
 				?>
 			</td>
 		</tr>
 		<?php if(!$is_member) { ?>
 		<tr>
-			<th scope="row">비밀번호</td>
-			<td><input name="passwd" type="password" class="frm_input"></td>
+			<th scope="row">비밀번호</th>
+			<td><input name="passwd" type="password" class='frm_input'></td>
 		</tr>
 		<?php } ?>
 		<?php if($board['use_category'] == '1') { ?>
@@ -49,6 +49,7 @@ include_once(BV_PATH.'/include/board_category.php');
 				<option value="">선택하세요</option>
 				<?php echo get_category_option($board['usecate']); ?>
 				</select>
+				<script>document.fboardform.ca_name.value='<?php echo $write[ca_name]; ?>';</script>
 			</td>
 		</tr>
 		<?php } ?>
@@ -56,8 +57,13 @@ include_once(BV_PATH.'/include/board_category.php');
 		$option = "";
 		$option_hidden = "";
 		if(is_admin()) {
-			$option .= "<div class=\"check-wr\"><input type=\"checkbox\" name=\"btype\" value=\"1\" id=\"optNotice\"> <label for=\"optNotice\">공지사항</label></div>";
-			$option .= "<div class=\"check-wr\"><input type=\"checkbox\" name=\"issecret\" value=\"Y\" class=\"marl15\" id=\"optSecret\"> <label for=\"optSecret\">비밀글</label></div>";
+			unset($checked);
+			if($write['btype']=='1') { $checked = 'checked'; }
+			$option .= "<input type=\"checkbox\" name=\"btype\" value=\"1\" $checked> 공지사항&nbsp;&nbsp;";
+	
+			unset($checked);
+			if($write['issecret']=='Y') { $checked = 'checked'; }
+			$option .= "<input type=\"checkbox\" name=\"issecret\" value=\"Y\" $checked> 비밀글";
 		} else {
 	
 			switch($board['use_secret']){
@@ -65,11 +71,13 @@ include_once(BV_PATH.'/include/board_category.php');
 					$option_hidden .= "<input type=\"hidden\" value=\"N\" name=\"issecret\">";
 					break;
 				case '1':
-					$option .= "<input type=\"checkbox\" value=\"Y\" name=\"issecret\"> 비밀글";
+					unset($checked);
+					if($write['issecret']=='Y') { $checked = 'checked'; }
+					$option .= "<input type=\"checkbox\" value=\"Y\" name=\"issecret\" $checked> 비밀글";
 					break;
 				case '2':
 					$option_hidden .= "<input type=\"hidden\" value=\"Y\" name=\"issecret\">";
-					break;
+				break;
 			}
 		}
 	
@@ -83,22 +91,33 @@ include_once(BV_PATH.'/include/board_category.php');
 		<?php } ?>
 		<tr>
 			<th scope="row">제목</th>
-			<td><input type="text" name="subject" class="frm_input wfull"></td>
+			<td><input type="text" name="subject" value="<?php echo $write['subject']; ?>" class="frm_input wfull"></td>
 		</tr>
 		<tr>
 			<th scope="row">내용</th>
 			<td>
-				<?php echo editor_html('memo', get_text($board['insert_content'], 0)); ?>
+				<?php echo editor_html('memo', get_text($write['memo'], 0)); ?>
 			</td>
 		</tr>
-		<?php if($board['usefile']=='Y') { ?>
+		<?php if($board['usefile']=='Y' ) { ?>
 		<tr>
 			<th scope="row">첨부파일1</th>
-			<td><input type="file" name="file1"></td>
+			<td>
+				<input type="file" name="file1">
+				<?php if($write['fileurl1']) { ?>
+				<a href="<?php echo BV_DATA_URL.'/board/'.$boardid.'/'.$write['fileurl1']; ?>" target="_blank"><span class="bold fc_255"><?php echo $write['fileurl1']; ?></span></a>
+				<input type="checkbox" name="del_file1" value="<?php echo $write['fileurl1']; ?>"> 삭제
+				<?php } ?>
+			</td>
 		</tr>
 		<tr>
 			<th scope="row">첨부파일2</th>
-			<td><input type="file" name="file2"></td>
+			<td>
+				<input type="file" name="file2">
+				<?php if($write['fileurl2']) { ?>
+				<a href="<?php echo BV_DATA_URL.'/board/'.$boardid.'/'.$write['fileurl2']; ?>" target="_blank"><span class="bold fc_255"><?php echo $write['fileurl2']; ?></span></a>
+				<input type="checkbox" name="del_file2" value="<?php echo $write['fileurl2']; ?>"> 삭제
+				<?php } ?></td>
 		</tr>
 		<?php } ?>
 		</tbody>
@@ -112,15 +131,18 @@ include_once(BV_PATH.'/include/board_category.php');
 </div>
 
 <script>
-function fboardform_submit(f) {
+function fboardform_submit(f)
+{
 	<?php if(!$is_member) { ?>
-	if(!f.writer_s.value) {
+	if(!f.writer_s.value)
+	{
 		alert('작성자명을 입력하세요.');
 		f.writer_s.focus();
 		return false;
 	}
 
-	if(!f.passwd.value) {
+	if(!f.passwd.value)
+	{
 		alert('비밀번호를 입력하세요.');
 		f.passwd.focus();
 		return false;
@@ -135,7 +157,8 @@ function fboardform_submit(f) {
 	}
 	<?php } ?>
 
-	if(!f.subject.value) {
+	if(!f.subject.value)
+	{
 		alert('제목을 입력하세요.');
 		f.subject.focus();
 		return false;

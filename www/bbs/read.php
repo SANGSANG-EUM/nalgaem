@@ -40,7 +40,8 @@ if($bo_file2)
 sql_query("update shop_board_{$boardid} set readcount='$bo_hit' where index_no='$index_no' ");
 
 $accept = array("gif","jpg","GIF","JPG","PNG","png");
-$bo_subject = "<b>".$bo_subject."</b>";
+$bo_subject = $bo_subject;
+// $bo_subject = "<b>".$bo_subject."</b>";
 
 if($bo_issecret=='Y')
 {

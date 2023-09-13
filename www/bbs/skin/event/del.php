@@ -1,12 +1,8 @@
 <?php
 if(!defined('_BLUEVATION_')) exit;
-include_once(BV_PATH.'/include/board_category.php');
 ?>
 
 <div class="subwr">
-	<!-- 게시판 분류 { -->	
-		<?php boardCategory(0); ?>
-	<!-- } 게시판 분류 -->
 	<form name="fboardform" action="del.php" method="post" onsubmit="return fboardform_submit(this);">
 	<input type='hidden' name="index_no" value="<?php echo $index_no; ?>">
 	<input type="hidden" name="boardid" value="<?php echo $boardid; ?>">
@@ -27,7 +23,7 @@ include_once(BV_PATH.'/include/board_category.php');
 	</div>
 	<?php } else { ?>
 	<div class="del_box">
-		<div>
+		<div class="del_in">
 			한번 삭제된 데이터는 복구되지 않습니다.<br>아래 비밀번호를 입력하여 주십시오.
 			<p class="mart15">
 				<input name="passwd" type="password" class="frm_input">

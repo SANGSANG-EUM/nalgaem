@@ -46,7 +46,7 @@ include_once(BV_PATH.'/include/board_category.php');
 ?>
 
 <a href="" class="quick-banner quick-cafe">
-  <img src="/source/img/img-cafe_quick.png" alt="날갬카페">
+	<img src="/source/img/img-cafe_quick.png" alt="날갬카페">
 </a>
 
 <!-- 서브비주얼 { -->
@@ -56,7 +56,7 @@ include_once(BV_PATH.'/include/board_category.php');
 <div class="subwr">
 
 <!-- 게시판 분류 { -->	
-	<?php boardCategory(0); ?>
+	<?php boardCategory(2); ?>
 <!-- } 게시판 분류 -->
 
 	<!-- 기존 검색창 주석처리 후 커스텀 검색창 삽입 -->
@@ -110,7 +110,7 @@ include_once(BV_PATH.'/include/board_category.php');
 	</p>
 	
 	<div class="tbl_head01 tbl_wrap">
-		<table>
+		<div class="faq-wr">
 		<!-- <colgroup>
 			<col width="50">
 			<?php if(is_admin()) { ?>
@@ -139,13 +139,15 @@ include_once(BV_PATH.'/include/board_category.php');
 			<input type="checkbox" name="chkall" value="1" onclick="check_all(this.form);" id="checkAll">
 			<label for="checkAll">전체선택</label>
 			<?php } ?>
-		<tbody>
+		<ul class="faq-ul">
 		<?php
 		$sql = " select * from shop_board_{$boardid} where btype = '1' {$sql_search2} order by fid desc ";
 		$rst = sql_query($sql);
 		for($i=0; $row=sql_fetch_array($rst); $i++) {
 			$bo_subject	= cut_str($row['subject'], $board['list_cut']);
 			$bo_wdate	= date("Y-m-d", $row['wdate']);
+			// 글 내용 추가
+			$bo_memo = $row['memo'];
 	
 			if($row['fileurl1'] || $row['fileurl2'])
 				$bo_file_yes ="<img src='".$bo_img_url."/img/file_on.gif'>";
@@ -159,26 +161,27 @@ include_once(BV_PATH.'/include/board_category.php');
 	
 			$bo_href = './read.php?index_no='.$row['index_no'].'&'.$qstr1;
 		?>
-		<tr>
-			<td class="tac board-number">[공지]</td>
-			<!-- <td class="tac"><img src="<?php //echo $bo_img_url; ?>/img/notice.gif"></td> -->
+		<li class="faq-li">
 			<?php if(is_admin()) { ?>
-			<td class="tac"><input type="checkbox" name="OrderNum[]" value="<?php echo $row['index_no']; ?>"></td>
+			<div class="tac faq"><input type="checkbox" name="OrderNum[]" value="<?php echo $row['index_no']; ?>"></div>
 			<?php } ?>
-			<td class="tal board-subject">
-				<a href="<?php echo $bo_href; ?>"><?php echo $bo_subject; ?></a><?php if($row['issecret'] == 'Y') { ?>&nbsp;<img src='<?php echo $bo_img_url; ?>/img/icon_secret.gif'><?php } ?><?php if($row['tailcount']) { ?>&nbsp;<img src='<?php echo $bo_img_url; ?>/img/dot_cnum.gif'>&nbsp;<span class="fc_197">(<?php echo $row['tailcount']; ?>)</span><?php } ?><?php echo $bo_newicon; ?>
-			</td>
-			<!-- <td class="tac"><?php //echo $row['writer_s']; ?></td> -->
-			<!-- <td class="tac"><?php //echo $bo_file_yes; ?></td> -->
-			<!-- <td class="tac"><?php //echo $row['readcount']; ?></td> -->
-			<td class="tac board-date"><?php echo $bo_wdate; ?></td>
-		</tr>
+			<button type="button" class="faq-q"><span class="faq-q-icon">Q</span><span class="faq-q-tit"><?php echo $bo_subject; ?></span></button>
+			<div class="faq-a">
+				<div class="faq-a-inner">
+					<div class="faq-a-icon">A.</div>
+					<div class="faq-a-cnt"><?php echo conv_content($bo_memo, 1)?></div>
+				</div>
+				<?php if(is_admin()) { ?><a href="<?php echo $bo_href; ?>" class="admin-btn">관리자</a><?php } ?>
+			</div>
+		</li>
 		<?php
 			$run++;
 		}
 	
 		for($i=0; $row=sql_fetch_array($result); $i++) {
 			$bo_wdate = date("Y-m-d", $row['wdate']);
+			// 글 내용 추가
+			$bo_memo = $row['memo'];
 	
 			if($row['fileurl1'] || $row['fileurl2'])
 				$bo_file_yes ="<img src='".$bo_img_url."/img/file_on.gif'>";
@@ -208,27 +211,28 @@ include_once(BV_PATH.'/include/board_category.php');
 	
 			$bo_href = './read.php?index_no='.$row['index_no'].'&'.$qstr1;
 		?>
-		<tr>
-			<td class="tac board-number"><?php echo $num--; ?></td>
+
+		<li class="faq-li">
 			<?php if(is_admin()) { ?>
-			<td class="tac"><input type="checkbox" name="OrderNum[]" value="<?php echo $row['index_no']; ?>"></td>
+			<div class="tac faq"><input type="checkbox" name="OrderNum[]" value="<?php echo $row['index_no']; ?>"></div>
 			<?php } ?>
-			<td class="tal board-subject">
-				<a href="<?php echo $bo_href; ?>"><?php echo $bo_subject; ?></a><?php if($row['issecret'] == 'Y') { ?>&nbsp;<img src="<?php echo $bo_img_url; ?>/img/icon_secret.gif"><?php } ?>&nbsp;<?php if($row['tailcount']) { ?><img src='<?php echo $bo_img_url; ?>/img/dot_cnum.gif'>&nbsp;<span class="fc_197">(<?php echo $row['tailcount']; ?>)</span><?php } ?><?php echo $bo_newicon; ?>
-			</td>
-			<!-- <td class="tac"><?php //echo $row['writer_s']; ?></td> -->
-			<!-- <td class="tac"><?php //echo $bo_file_yes; ?></td> -->
-			<!-- <td class="tac"><?php //echo $row['readcount']; ?></td> -->
-			<td class="tac board-date"><?php echo $bo_wdate; ?></td>
-		</tr>
+			<button type="button" class="faq-q"><span class="faq-q-icon">Q</span><span class="faq-q-tit"><?php echo $bo_subject; ?></span></button>
+			<div class="faq-a">
+				<div class="faq-a-inner">
+					<div class="faq-a-icon">A.</div>
+					<div class="faq-a-cnt"><?php echo conv_content($bo_memo, 1)?></div>
+				</div>
+				<?php if(is_admin()) { ?><a href="<?php echo $bo_href; ?>" class="admin-btn">관리자</a><?php } ?>
+			</div>
+		</li>
 		<?php
 			$run++;
 		}
 		?>
 		<?php if(!$run) { ?>
-		<tr><td colspan="<?php echo $colspan; ?>" class="empty_table">게시물이 없습니다.</td></tr>
+		<li class="empty_table">게시물이 없습니다.</li>
 		<?php } ?>
-		</tbody>
+		</ul>
 		</table>
 	</div>
 	
@@ -283,4 +287,20 @@ function check_all(f)
     for(i=0; i<chk.length; i++)
         chk[i].checked = f.chkall.checked;
 }
+
+// faq 열고 닫기
+$('.faq-q').on('click', function(){
+	const faqLi = $(this).closest('.faq-li');
+	const faqA = $(this).next('.faq-a');
+
+	if(faqLi.hasClass('open')) {
+		$('.faq-a').stop().slideUp();
+		$('.faq-li').removeClass('open');
+	} else {
+		$('.faq-li').removeClass('open');
+		$('.faq-a').stop().slideUp();
+		faqLi.addClass('open');
+		faqA.stop().slideDown();
+	};
+});
 </script>

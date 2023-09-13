@@ -7,7 +7,7 @@ include_once(BV_PATH.'/include/board_category.php');
 <div class="subwr write">
 
 	<!-- 게시판 분류 { -->	
-	<?php boardCategory(0); ?>
+	<?php boardCategory(2); ?>
 	<!-- } 게시판 분류 -->
 
 	<form name="fboardform" id="fboardform" method="post" action="<?php echo $from_action_url; ?>" onsubmit="return fboardform_submit(this);" autocomplete="off" enctype="MULTIPART/FORM-DATA">
@@ -76,10 +76,10 @@ include_once(BV_PATH.'/include/board_category.php');
 		echo $option_hidden;
 		if($option) {
 		?>
-		<tr>
+		<!-- <tr>
 			<th scope="row">옵션</th>
-			<td><?php echo $option; ?></td>
-		</tr>
+			<td><?php //echo $option; ?></td>
+		</tr> -->
 		<?php } ?>
 		<tr>
 			<th scope="row">제목</th>
