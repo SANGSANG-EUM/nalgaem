@@ -27,7 +27,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
         <div class="region-slider swiper">
           <div class="swiper-wrapper">
             <div class="region-slide swiper-slide">
-              <a href="" class="region-sl-link">
+              <a href="/sub/tour_view.php" class="region-sl-link">
                 <div class="region-sl-img">
                   <img src="https://picsum.photos/id/16/100/100" alt="">
                 </div>
@@ -37,7 +37,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
               </a>
             </div>
             <div class="region-slide swiper-slide">
-              <a href="" class="region-sl-link">
+              <a href="/sub/tour_view.php" class="region-sl-link">
                 <div class="region-sl-img">
                   <img src="https://picsum.photos/id/17/100/100" alt="">
                 </div>
@@ -47,7 +47,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
               </a>
             </div>
             <div class="region-slide swiper-slide">
-              <a href="" class="region-sl-link">
+              <a href="/sub/tour_view.php" class="region-sl-link">
                 <div class="region-sl-img">
                   <img src="https://picsum.photos/id/18/100/100" alt="">
                 </div>
@@ -57,7 +57,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
               </a>
             </div>
             <div class="region-slide swiper-slide">
-              <a href="" class="region-sl-link">
+              <a href="/sub/tour_view.php" class="region-sl-link">
                 <div class="region-sl-img">
                   <img src="https://picsum.photos/id/19/100/100" alt="">
                 </div>
@@ -67,7 +67,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
               </a>
             </div>
             <div class="region-slide swiper-slide">
-              <a href="" class="region-sl-link">
+              <a href="/sub/tour_view.php" class="region-sl-link">
                 <div class="region-sl-img">
                   <img src="https://picsum.photos/id/20/100/100" alt="">
                 </div>
@@ -77,7 +77,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
               </a>
             </div>
             <div class="region-slide swiper-slide">
-              <a href="" class="region-sl-link">
+              <a href="/sub/tour_view.php" class="region-sl-link">
                 <div class="region-sl-img">
                   <img src="https://picsum.photos/id/16/100/100" alt="">
                 </div>
@@ -87,7 +87,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
               </a>
             </div>
             <div class="region-slide swiper-slide">
-              <a href="" class="region-sl-link">
+              <a href="/sub/tour_view.php" class="region-sl-link">
                 <div class="region-sl-img">
                   <img src="https://picsum.photos/id/16/100/100" alt="">
                 </div>
@@ -97,7 +97,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
               </a>
             </div>
             <div class="region-slide swiper-slide">
-              <a href="" class="region-sl-link">
+              <a href="/sub/tour_view.php" class="region-sl-link">
                 <div class="region-sl-img">
                   <img src="https://picsum.photos/id/16/100/100" alt="">
                 </div>
@@ -107,7 +107,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
               </a>
             </div>
             <div class="region-slide swiper-slide">
-              <a href="" class="region-sl-link">
+              <a href="/sub/tour_view.php" class="region-sl-link">
                 <div class="region-sl-img">
                   <img src="https://picsum.photos/id/16/100/100" alt="">
                 </div>
@@ -117,7 +117,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
               </a>
             </div>
             <div class="region-slide swiper-slide">
-              <a href="" class="region-sl-link">
+              <a href="/sub/tour_view.php" class="region-sl-link">
                 <div class="region-sl-img">
                   <img src="https://picsum.photos/id/16/100/100" alt="">
                 </div>
@@ -127,7 +127,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
               </a>
             </div>
             <div class="region-slide swiper-slide">
-              <a href="" class="region-sl-link">
+              <a href="/sub/tour_view.php" class="region-sl-link">
                 <div class="region-sl-img">
                   <img src="https://picsum.photos/id/16/100/100" alt="">
                 </div>
@@ -137,7 +137,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
               </a>
             </div>
             <div class="region-slide swiper-slide">
-              <a href="" class="region-sl-link">
+              <a href="/sub/tour_view.php" class="region-sl-link">
                 <div class="region-sl-img">
                   <img src="https://picsum.photos/id/16/100/100" alt="">
                 </div>
@@ -147,7 +147,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
               </a>
             </div>
             <div class="region-slide swiper-slide">
-              <a href="" class="region-sl-link">
+              <a href="/sub/tour_view.php" class="region-sl-link">
                 <div class="region-sl-img">
                   <img src="https://picsum.photos/id/16/100/100" alt="">
                 </div>
@@ -157,7 +157,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
               </a>
             </div>
             <div class="region-slide swiper-slide">
-              <a href="" class="region-sl-link">
+              <a href="/sub/tour_view.php" class="region-sl-link">
                 <div class="region-sl-img">
                   <img src="https://picsum.photos/id/16/100/100" alt="">
                 </div>
@@ -167,7 +167,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
               </a>
             </div>
             <div class="region-slide swiper-slide">
-              <a href="" class="region-sl-link">
+              <a href="/sub/tour_view.php" class="region-sl-link">
                 <div class="region-sl-img">
                   <img src="https://picsum.photos/id/16/100/100" alt="">
                 </div>
@@ -211,7 +211,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
 
         <ul class="sub-card-ul place-card-ul">
           <li class="sub-card-li place-card-li">
-            <a href="" class="place-sl-inner">
+            <a href="/sub/tour_view.php" class="place-sl-inner">
               <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
               <div class="place-sl-info-wr">
                 <div class="place-sl-condition">쾌적</div>
@@ -242,7 +242,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
             </a>
           </li>
           <li class="sub-card-li place-card-li">
-            <a href="" class="place-sl-inner">
+            <a href="/sub/tour_view.php" class="place-sl-inner">
               <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
               <div class="place-sl-info-wr">
                 <div class="place-sl-condition">쾌적</div>
@@ -273,7 +273,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
             </a>
           </li>
           <li class="sub-card-li place-card-li">
-            <a href="" class="place-sl-inner">
+            <a href="/sub/tour_view.php" class="place-sl-inner">
               <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
               <div class="place-sl-info-wr">
                 <div class="place-sl-condition">쾌적</div>
@@ -304,7 +304,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
             </a>
           </li>
           <li class="sub-card-li place-card-li">
-            <a href="" class="place-sl-inner">
+            <a href="/sub/tour_view.php" class="place-sl-inner">
               <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
               <div class="place-sl-info-wr">
                 <div class="place-sl-condition">쾌적</div>
@@ -335,7 +335,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
             </a>
           </li>
           <li class="sub-card-li place-card-li">
-            <a href="" class="place-sl-inner">
+            <a href="/sub/tour_view.php" class="place-sl-inner">
               <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
               <div class="place-sl-info-wr">
                 <div class="place-sl-condition">쾌적</div>
@@ -366,7 +366,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
             </a>
           </li>
           <li class="sub-card-li place-card-li">
-            <a href="" class="place-sl-inner">
+            <a href="/sub/tour_view.php" class="place-sl-inner">
               <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
               <div class="place-sl-info-wr">
                 <div class="place-sl-condition">쾌적</div>
@@ -397,7 +397,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
             </a>
           </li>
           <li class="sub-card-li place-card-li">
-            <a href="" class="place-sl-inner">
+            <a href="/sub/tour_view.php" class="place-sl-inner">
               <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
               <div class="place-sl-info-wr">
                 <div class="place-sl-condition">쾌적</div>
@@ -428,7 +428,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
             </a>
           </li>
           <li class="sub-card-li place-card-li">
-            <a href="" class="place-sl-inner">
+            <a href="/sub/tour_view.php" class="place-sl-inner">
               <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
               <div class="place-sl-info-wr">
                 <div class="place-sl-condition">쾌적</div>
@@ -459,7 +459,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
             </a>
           </li>
           <li class="sub-card-li place-card-li">
-            <a href="" class="place-sl-inner">
+            <a href="/sub/tour_view.php" class="place-sl-inner">
               <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
               <div class="place-sl-info-wr">
                 <div class="place-sl-condition">쾌적</div>
@@ -490,7 +490,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
             </a>
           </li>
           <li class="sub-card-li place-card-li">
-            <a href="" class="place-sl-inner">
+            <a href="/sub/tour_view.php" class="place-sl-inner">
               <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
               <div class="place-sl-info-wr">
                 <div class="place-sl-condition">쾌적</div>
@@ -521,7 +521,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
             </a>
           </li>
           <li class="sub-card-li place-card-li">
-            <a href="" class="place-sl-inner">
+            <a href="/sub/tour_view.php" class="place-sl-inner">
               <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
               <div class="place-sl-info-wr">
                 <div class="place-sl-condition">쾌적</div>
@@ -552,7 +552,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
             </a>
           </li>
           <li class="sub-card-li place-card-li">
-            <a href="" class="place-sl-inner">
+            <a href="/sub/tour_view.php" class="place-sl-inner">
               <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
               <div class="place-sl-info-wr">
                 <div class="place-sl-condition">쾌적</div>
@@ -583,7 +583,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
             </a>
           </li>
           <li class="sub-card-li place-card-li">
-            <a href="" class="place-sl-inner">
+            <a href="/sub/tour_view.php" class="place-sl-inner">
               <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
               <div class="place-sl-info-wr">
                 <div class="place-sl-condition">쾌적</div>
@@ -614,7 +614,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
             </a>
           </li>
           <li class="sub-card-li place-card-li">
-            <a href="" class="place-sl-inner">
+            <a href="/sub/tour_view.php" class="place-sl-inner">
               <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
               <div class="place-sl-info-wr">
                 <div class="place-sl-condition">쾌적</div>
@@ -645,7 +645,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
             </a>
           </li>
           <li class="sub-card-li place-card-li">
-            <a href="" class="place-sl-inner">
+            <a href="/sub/tour_view.php" class="place-sl-inner">
               <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
               <div class="place-sl-info-wr">
                 <div class="place-sl-condition">쾌적</div>
@@ -676,7 +676,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
             </a>
           </li>
           <li class="sub-card-li place-card-li">
-            <a href="" class="place-sl-inner">
+            <a href="/sub/tour_view.php" class="place-sl-inner">
               <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
               <div class="place-sl-info-wr">
                 <div class="place-sl-condition">쾌적</div>

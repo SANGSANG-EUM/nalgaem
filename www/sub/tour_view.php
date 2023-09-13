@@ -42,6 +42,9 @@ include_once(BV_PATH.'/include/sub_visual.php');
               <li class="nalgaem-view-top-li bookmark">
                 <p class="nalgaem-view-bookmark"><img src="/source/img/icon-star_gray.png" alt="">찜하기<span>30</span></p>
               </li>
+              <li class="nalgaem-view-top-li share">
+                <p class="nalgaem-view-share"><img src="/source/img/icon-share.png" alt="">공유하기</p>
+              </li>
             </ul>
           </div>
         </div>
@@ -129,7 +132,7 @@ include_once(BV_PATH.'/include/sub_visual.php');
 
       <!-- 상세정보 { -->
       <div class="subwr">
-        <div class="nalgaem-view-content">
+        <div class="nalgaem-view-content nalgaem-view-content--info">
           <h5>상세정보</h5>
           <ul class="nalgaem-view-content-ul">
             <li class="nalgaem-view-content-li">
@@ -304,6 +307,13 @@ include_once(BV_PATH.'/include/sub_visual.php');
 </div>
 
 </div>
+
+<script>
+$(document).ready(function () {
+  
+});
+
+</script>
 
 <?php
 include_once(BV_PATH.'/tail.php'); // 하단
