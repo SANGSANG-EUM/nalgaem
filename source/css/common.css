@@ -44,13 +44,30 @@ i.left{transform: rotate(135deg); -webkit-transform: rotate(135deg); -moz-transf
 .check-wr input[type=checkbox]:checked + label:before{border-color: #00E8E8; background: #00E8E8 url('/source/img/icon-check.png') no-repeat center / 80%;}
 
 /* input text */
-.nalgaem-input {padding: 15px; width: 100%; height: 44px; border: 1px solid #e3e3e3; border-radius: 0.3rem; background-color: #fff; font-weight: 400; color: #666;}
+.nalgaem-input {padding: 0 15px; width: 100%; height: 44px; border: 1px solid #e3e3e3; border-radius: 0.3rem; background-color: #fff; font-weight: 400; color: #666;}
 .nalgaem-input::placeholder {color: #CCCCCC;}
-.nalgaem-input:read-only {background-color: #F2F2F2; border-color: #E3E3E3; color: #999; outline: none;}
-textarea.nalgaem-input {resize: none;}
+.nalgaem-input.readonly {background-color: #F2F2F2; border-color: #E3E3E3; color: #999; outline: none;}
+textarea.nalgaem-input {padding: 15px; resize: none;}
+textarea.nalgaem-input::-webkit-scrollbar {width: 6px; height: 6px; scrollbar-width: 6px; scrollbar-height: 6px;}
+textarea.nalgaem-input::-webkit-scrollbar-thumb {border-radius: 3px; background: #abadac;}
+textarea.nalgaem-input::-webkit-scrollbar-track-piece {background: #e5e5e5;}
 .nalgaem-input.input-date {padding: 10px; max-width: 160px; height: 36px; border-color: #d9d9d9; padding-right: 50px; background: url('/source/img/icon-calendar.png') no-repeat center right 10px / 22px; font-size: 0.875rem;}
 
+/* select */
+select.nalgaem-input {appearance: none; -webkit-appearance: none; background: url('/source/img/icon-arrow_faq.png') no-repeat center right 15px / 14px;}
+select.nalgaem-input:required:invalid {color: #CCCCCC;}
+.nalgaem-input option {color:#666; }
+.nalgaem-input option[value=""][disabled] {display:none;}
+
+/* input width */
 .w380 {max-width: 380px;}
+.w500 {max-width: 500px;}
+.w700 {max-width: 700px;}
+
+/* file */
+/* .file-input {position: absolute; width: 0; height: 0; opacity: 0; visibility:hidden; padding: 0; margin: 0;} */
+.file-input {display: none;}
+.file-btn {display: flex; align-items: center; justify-content: center; width: 70px; height: 34px; font-size: 14px; font-weight: 400; color: #666; border-radius: 0.3rem; border: 1px solid #e5e5e5;}
 
 /* cut text */
 .cut_text{

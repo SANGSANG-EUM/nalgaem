@@ -820,10 +820,10 @@ html, body {scroll-behavior: smooth;}
 .mypage-list-li {display: flex; padding: 22.5px 20px; border-bottom: 1px solid #D9D9D9;}
 .mypage-list-li-l {width: 160px; padding-right: 20px;}
 .mypage-list-li-r {display: flex; flex-direction: column; justify-content: center; gap: 10px; width: calc(100% - 160px);}
-.mypage-list-li-l-txt1 {padding-top: 8px;}
+.mypage-list-li-l-txt1 {padding-top: 6px;}
 .mypage-list-li-l-txt2 {font-size: 0.875rem; font-weight: 400; color: #999;}
 .mypage-list-li-r-txt1 {}
-.mypage-list-input-wr {display: flex; gap: 10px;}
+.mypage-list-input-wr {display: flex; gap: 10px; position: relative;}
 .my-mini-btn {width: 100px; height: 44px; border-radius: 50px; border: 1px solid; font-weight: 500;}
 .my-mini-btn.white {color: #333; border-color: #666; background-color: #fff;}
 .my-mini-btn.black {color: #fff;  border-color: #333; background-color: #333;}
@@ -896,14 +896,27 @@ html, body {scroll-behavior: smooth;}
 .mypage-order-pop-ul::-webkit-scrollbar-thumb {border-radius: 3px; background: #abadac;}
 .mypage-order-pop-ul::-webkit-scrollbar-track-piece {background: #e5e5e5;}
 
+/* 마이페이지 > 문의내역 */
+.mypage-qna-hidden td {padding: 0; border: 0;}
+.mypage-qna-hidden .mypage-qna-inner {display: none; padding: 0 15px 15px; border-bottom: 1px solid #D9D9D9; text-align: left;}
+.mypage-qna-btn {cursor: pointer;}
+.mypage-qna-cnt {display: flex; gap: 0 25px; padding: 30px 50px;}
+.mypage-qna-cnt.q .mypage-qna-cnt-l {font-weight: 500; color: #999;}
+.mypage-qna-cnt.a {border-radius: 1rem; background-color: #FAFAFA;}
+.mypage-qna-cnt.a .mypage-qna-cnt-l {font-weight: 500; color: #333;}
 
-
-
-
-
-#mb_confirm {padding-top: 10vh;}
-
-
+/* 마이페이지 > 문의작성 */
+.textarea-wr {width: 100%; border: 1px solid #e3e3e3; border-radius: 0.3rem; background-color: #fff;  padding-bottom: 30px;}
+.mypage-qna-ul textarea {border: 0; height: 170px; outline: none;}
+.mypage-qna-txtcount-wr {position: absolute; right: 15px; bottom: 10px; font-size: 12px; font-weight: 400; color: #aaa;}
+.mypage-qna-ul .mypage-list-li:last-child {border-color: #333;}
+.file-wr {display: flex; align-items: flex-start; gap: 0 20px; margin-top: 5px;}
+.file-txt-li {display: flex; align-items: center; gap: 0 16px; height: 34px; color: #999; }
+.file-delete-btn {width: 22px; height: 22px; background-color: #F4F4F4; border-radius: 0.2rem; border: 0;}
+.file-delete-btn span {display: block; position: relative; width: 22px; height: 22px; rotate: 45deg;}
+.file-delete-btn span::after, .file-delete-btn span::before {content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #aaa;}
+.file-delete-btn span::after {width: 14px; height: 1px;}
+.file-delete-btn span::before {width: 1px; height: 14px;}
 
 /* hover */
 .hd-gnb-li:hover > a {color: #00E8E8 !important;}
