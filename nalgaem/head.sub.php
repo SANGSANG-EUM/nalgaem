@@ -110,6 +110,23 @@ if(G5_IS_MOBILE) {
 if(!defined('G5_IS_ADMIN'))
     echo $config['cf_add_script'];
 ?>
+<link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+<link rel="stylesheet" href="<?php echo G5_URL ?>/source/plugin/fullpage/jquery.fullpage.css">
+<link rel="stylesheet" href="<?php echo G5_URL ?>/source/plugin/swiper/swiper-bundle.min.css">
+<link rel="stylesheet" href="<?php echo G5_URL ?>/source/plugin/datepicker/datepicker.css">
+<link rel="stylesheet" href="<?php echo G5_URL ?>/css/fonts.css">
+<link rel="stylesheet" href="<?php echo G5_URL ?>/css/common.css">
+<link rel="stylesheet" href="<?php echo G5_URL ?>/css/normal.css">
+<link rel="stylesheet" href="<?php echo G5_URL ?>/css/responisve.css">
+<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+<script src="/source/js/jquery-3.7.0.min.js"></script>
+<script src="/source/plugin/datepicker/datepicker.js"></script>
+<script src="/source/plugin/fullpage/jquery.fullpage.js"></script>
+<script src="/source/plugin/matchheight/jquery.matchHeight.js"></script>
+<script src="/source/plugin/swiper/swiper-bundle.min.js"></script>
+<script src="/source/js/slide.js"></script>
+<script src="/source/js/normal.js"></script>
 </head>
 <body<?php echo isset($g5['body_script']) ? $g5['body_script'] : ''; ?>>
 <?php

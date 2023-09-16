@@ -11,66 +11,51 @@ if (G5_IS_MOBILE) {
     return;
 }
 ?>
-
-    </div>
-    <div id="aside">
-        <?php echo outlogin(); // 외부 로그인, 테마의 스킨을 사용하려면 스킨을 theme/basic 과 같이 지정 ?>
-        <?php echo poll(); // 설문조사, 테마의 스킨을 사용하려면 스킨을 theme/basic 과 같이 지정 ?>
-    </div>
-</div>
-
-</div>
-<!-- } 콘텐츠 끝 -->
-
-<hr>
-
-<!-- 하단 시작 { -->
-<div id="ft">
-
-    <div id="ft_wr">
-        <div id="ft_link" class="ft_cnt">
-            <a href="<?php echo get_pretty_url('content', 'company'); ?>">회사소개</a>
-            <a href="<?php echo get_pretty_url('content', 'privacy'); ?>">개인정보처리방침</a>
-            <a href="<?php echo get_pretty_url('content', 'provision'); ?>">서비스이용약관</a>
-            <a href="<?php echo get_device_change_url(); ?>">모바일버전</a>
-        </div>
-        <div id="ft_company" class="ft_cnt">
-        	<h2>사이트 정보</h2>
-	        <p class="ft_info">
-	        	회사명 : 회사명 / 대표 : 대표자명<br>
-				주소  : OO도 OO시 OO구 OO동 123-45<br>
-				사업자 등록번호  : 123-45-67890<br>
-				전화 :  02-123-4567  팩스  : 02-123-4568<br>
-				통신판매업신고번호 :  제 OO구 - 123호<br>
-				개인정보관리책임자 :  정보책임자명<br>
-			</p>
-	    </div>
-        <?php
-        //공지사항
-        // 이 함수가 바로 최신글을 추출하는 역할을 합니다.
-        // 사용방법 : latest(스킨, 게시판아이디, 출력라인, 글자수);
-        // 테마의 스킨을 사용하려면 theme/basic 과 같이 지정
-        echo latest('notice', 'notice', 4, 13);
-        ?>
-
-        <?php echo visit(); // 접속자집계, 테마의 스킨을 사용하려면 스킨을 theme/basic 과 같이 지정 ?>
-    </div>
-    <!-- <div id="ft_catch"><img src="<?php echo G5_IMG_URL; ?>/ft_logo.png" alt="<?php echo G5_VERSION ?>"></div> -->
-    <div id="ft_copy">Copyright &copy; <b>소유하신 도메인.</b> All rights reserved.</div>
-
-    <button type="button" id="top_btn">
-    	<i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span>
-    </button>
-    <script>
-    $(function() {
-        $("#top_btn").on("click", function() {
-            $("html, body").animate({scrollTop:0}, '500');
-            return false;
-        });
-    });
-    </script>
-</div>
-
+<footer class="footer sub-foot">
+	<div class="wrapper">
+		<div class="foot-tit-wr">
+			<p class="foot-tit">여행이나 특별한 외출 전, <br>
+				날갬 APP으로 날씨를 확인하세요!</p>
+			<div class="foot-app-link-wr">
+				<a href="" class="foot-app-link foot-app-link--apple">
+					<img src="/source/img/icon-apple.png" alt="">
+					App Store
+				</a>
+				<a href="" class="foot-app-link foot-app-link--google">
+					<img src="/source/img/icon-playstore.png" alt="">
+					Google Play
+				</a>
+			</div>
+		</div>
+		<div class="foot-box">
+			<a href="javascript:void(0);" class="main-foot-top">
+				<img src="/source/img/icon-top.png" alt="최상단으로">
+			</a>
+			<div class="foot-box-in foot-box-in--l">
+				<div class="foot-info-wr">
+					<p class="foot-info">대전광역시 유성구 테크노4로 17 대덕비즈센터 B동 101호</p>
+					<p class="foot-info"><span>TEL</span> 042-933-5520</p>
+					<p class="foot-info"><span>E-MAIL</span> steve17@sijung.com</p>
+					<p class="foot-info"><span>사업자등록번호</span> 601-86-00597</p>
+				</div>
+				<div class="foot-copyright">
+					Copyright (C) SIJUNG. All Right Reserved.
+				</div>
+			</div>
+			<div class="foot-box-in foot-box-in--r foot-sns-link-wr">
+				<a href="" class="foot-sns-link foot-sns-link--facebook">
+					<img src="/source/img/icon-facebook.png" alt="">
+				</a>
+				<a href="" class="foot-sns-link foot-sns-link--youtube">
+					<img src="/source/img/icon-youtube.png" alt="">
+				</a>
+				<a href="" class="foot-sns-link foot-sns-link--instagram">
+					<img src="/source/img/icon-instagram.png" alt="">
+				</a>
+			</div>
+		</div>
+	</div>
+</footer>
 <?php
 if(G5_DEVICE_BUTTON_DISPLAY && !G5_IS_MOBILE) { ?>
 <?php
