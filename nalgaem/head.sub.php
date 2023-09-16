@@ -56,14 +56,9 @@ if($config['cf_add_meta'])
 ?>
 <title><?php echo $g5_head_title; ?></title>
 <?php
-if (defined('G5_IS_ADMIN')) {
+if (defined('G5_IS_ADMIN'))
     if(!defined('_THEME_PREVIEW_'))
         echo '<link rel="stylesheet" href="'.run_replace('head_css_url', G5_ADMIN_URL.'/css/admin.css?ver='.G5_CSS_VER, G5_URL).'">'.PHP_EOL;
-} else {
-    $shop_css = '';
-    if (defined('_SHOP_')) $shop_css = '_shop';
-    echo '<link rel="stylesheet" href="'.run_replace('head_css_url', G5_CSS_URL.'/'.(G5_IS_MOBILE?'mobile':'default').$shop_css.'.css?ver='.G5_CSS_VER, G5_URL).'">'.PHP_EOL;
-}
 ?>
 <!--[if lte IE 8]>
 <script src="<?php echo G5_JS_URL ?>/html5.js"></script>
@@ -89,8 +84,9 @@ $js_global_vars3 = $js_global_vars2->pack();
 echo  $js_global_vars3;
 ?>
 </script>
+<script src="/source/js/jquery-3.7.0.min.js"></script>
 <?php
-add_javascript('<script src="'.G5_JS_URL.'/jquery-1.12.4.min.js"></script>', 0);
+//add_javascript('<script src="'.G5_JS_URL.'/jquery-1.12.4.min.js"></script>', 0);
 add_javascript('<script src="'.G5_JS_URL.'/jquery-migrate-1.4.1.min.js"></script>', 0);
 if (defined('_SHOP_')) {
     if(!G5_IS_MOBILE) {
@@ -110,23 +106,23 @@ if(G5_IS_MOBILE) {
 if(!defined('G5_IS_ADMIN'))
     echo $config['cf_add_script'];
 ?>
-<link rel="stylesheet" type="text/css"
+  <link rel="stylesheet" type="text/css"
     href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
-<link rel="stylesheet" href="<?php echo G5_URL ?>/source/plugin/fullpage/jquery.fullpage.css">
-<link rel="stylesheet" href="<?php echo G5_URL ?>/source/plugin/swiper/swiper-bundle.min.css">
-<link rel="stylesheet" href="<?php echo G5_URL ?>/source/plugin/datepicker/datepicker.css">
-<link rel="stylesheet" href="<?php echo G5_URL ?>/css/fonts.css">
-<link rel="stylesheet" href="<?php echo G5_URL ?>/css/common.css">
-<link rel="stylesheet" href="<?php echo G5_URL ?>/css/normal.css">
-<link rel="stylesheet" href="<?php echo G5_URL ?>/css/responisve.css">
-<script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
-<script src="/source/js/jquery-3.7.0.min.js"></script>
-<script src="/source/plugin/datepicker/datepicker.js"></script>
-<script src="/source/plugin/fullpage/jquery.fullpage.js"></script>
-<script src="/source/plugin/matchheight/jquery.matchHeight.js"></script>
-<script src="/source/plugin/swiper/swiper-bundle.min.js"></script>
-<script src="/source/js/slide.js"></script>
-<script src="/source/js/normal.js"></script>
+  <link rel="stylesheet" href="/source/plugin/fullpage/jquery.fullpage.css">
+  <link rel="stylesheet" href="/source/plugin/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/source/plugin/datepicker/datepicker.css">
+  <link rel="stylesheet" href="/source/css/fonts.css">
+  <link rel="stylesheet" href="/source/css/common.css">
+  <link rel="stylesheet" href="/source/css/normal.css">
+  <link rel="stylesheet" href="/source/css/responisve.css">
+
+  <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+  <script src="/source/plugin/datepicker/datepicker.js"></script>
+  <script src="/source/plugin/fullpage/jquery.fullpage.js"></script>
+  <script src="/source/plugin/matchheight/jquery.matchHeight.js"></script>
+  <script src="/source/plugin/swiper/swiper-bundle.min.js"></script>
+  <script src="/source/js/slide.js"></script>
+  <script src="/source/js/normal.js"></script>
 </head>
 <body<?php echo isset($g5['body_script']) ? $g5['body_script'] : ''; ?>>
 <?php

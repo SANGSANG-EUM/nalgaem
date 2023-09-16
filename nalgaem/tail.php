@@ -11,6 +11,8 @@ if (G5_IS_MOBILE) {
     return;
 }
 ?>
+
+<div class="mainsec mainsec-6">
 <footer class="footer sub-foot">
 	<div class="wrapper">
 		<div class="foot-tit-wr">
@@ -56,6 +58,8 @@ if (G5_IS_MOBILE) {
 		</div>
 	</div>
 </footer>
+</div>
+</div>
 <?php
 if(G5_DEVICE_BUTTON_DISPLAY && !G5_IS_MOBILE) { ?>
 <?php
