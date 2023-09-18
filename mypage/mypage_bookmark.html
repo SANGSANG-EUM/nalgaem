@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날갬 마이페이지-관심목록</title>
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+  <link rel="stylesheet" href="/source/plugin/fullpage/jquery.fullpage.css">
+  <link rel="stylesheet" href="/source/plugin/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/source/plugin/datepicker/datepicker.css">
+  <link rel="stylesheet" href="/source/css/fonts.css">
+  <link rel="stylesheet" href="/source/css/common.css">
+  <link rel="stylesheet" href="/source/css/normal.css">
+  <link rel="stylesheet" href="/source/css/responisve.css">
+
+  <script charset="UTF-8" class="daum_roughmap_loader_script"
+    src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+  <script src="/source/js/jquery-3.7.0.min.js"></script>
+  <script src="/source/plugin/datepicker/datepicker.js"></script>
+  <script src="/source/plugin/fullpage/jquery.fullpage.js"></script>
+  <script src="/source/plugin/matchheight/jquery.matchHeight.js"></script>
+  <script src="/source/plugin/swiper/swiper-bundle.min.js"></script>
+  <script src="/source/js/slide.js"></script>
+  <script src="/source/js/normal.js"></script>
+
+  <!-- header, footer 임시 인클루드 -->
+  <script>
+    $(document).ready(function () {
+      $('#header-loaction').load("../include/header.html");
+    });
+    $(document).ready(function () {
+      $('#footer-loaction').load("../include/footer.html");
+    });
+  </script>
+</head>
+
+<body>
+
+  <!-- header 임시 인클루드 { -->
+  <div id="header-loaction"></div>
+  <!-- } header 임시 인클루드 -->
+
+  <div class="container sub mypage">
+    <div class="subwr">
+      <!-- 마이페이지 시작 { -->
+      <div id="con_lf">
+        <h2 class="mypage-tit">마이페이지</h2>
+
+        <div class="mypage-inner">
+
+
+          <!-- 좌측메뉴 시작 { -->
+          <div class="mypage-aside-wr">
+            <aside id="aside">
+              <ul class="mypage-aside-ul">
+                <li class="mypage-aside-li sub-cate-li">
+                  <a href="/mypage/mypage_main.html">기본정보</a>
+                </li>
+                <li class="mypage-aside-li sub-cate-li active">
+                  <a href="/mypage/mypage_bookmark.html">관심목록</a>
+                </li>
+                <li class="mypage-aside-li sub-cate-li ">
+                  <a href="/mypage/mypage_order.html">주문내역</a>
+                </li>
+                <li class="mypage-aside-li sub-cate-li ">
+                  <a href="/mypage/mypage_inquiry_list.html">문의내역</a>
+                </li>
+              </ul>
+            </aside>
+          </div>
+          <!-- } 좌측메뉴 끝 -->
+
+          <div class="mypage-cnt-wr">
+
+            <div class="mypage-top-wr">
+              <div class="mypage-top-info">
+                <div class="mypage-top-info-l">
+                  <p class="mypage-top-gretting">안녕하세요! 반가워요, <b>홍길동</b>님</p>
+                  <p class="mypage-top-name">아이디 표시 (닉네임 표시)</p>
+                </div>
+                <div class="mypage-top-info-r">
+                  <a href="/sub/mypage_edit.html" class="mypage-top-region"># 내 관심지역<img
+                      src="/source/img/icon-arrow_mytopinfo.png" alt="이동"></a>
+                  <div class="myhash-wr"><span class="myhash"># 서울</span><span class="myhash"># 대전</span><span
+                      class="myhash"># 제주도</span></div>
+                </div>
+              </div>
+              <div class="mypage-top-edit">
+                <a href="/sub/mypage_edit.html" class="cafe-opt-pop-btn black">정보
+                  수정</a>
+              </div>
+            </div>
+
+            <div class="mypage-box">
+              <div class="mypage-box-tit-wr">
+                <div class="mypage-box-tit">내가 찜한 목록</div>
+              </div>
+              <ul class="mypage-category-ul">
+                <li class="mypage-category-li on">
+                  <a href="">관광지</a>
+                </li>
+                <li class="mypage-category-li">
+                  <a href="">문화시설</a>
+                </li>
+                <li class="mypage-category-li">
+                  <a href="">축제</a>
+                </li>
+                <li class="mypage-category-li">
+                  <a href="">공연</a>
+                </li>
+                <li class="mypage-category-li">
+                  <a href="">카페</a>
+                </li>
+              </ul>
+              <div class="mypage-box-cnt">
+                <ul class="sub-card-ul mypage-card-ul">
+                  <li class="sub-card-li mypage-card-li">
+                    <a href="/sub/tour_view.php" class="place-sl-inner">
+                      <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
+                      <div class="place-sl-info-wr">
+                        <div class="place-sl-condition">쾌적</div>
+                        <div class="place-sl-weather-wr">
+                          <div class="place-sl-temperature">28˚</div>
+                          <div class="place-sl-sky-wr">
+                            <p>현재날씨</p>
+                            <p class="place-sl-sky">맑음</p>
+                          </div>
+                        </div>
+                        <div class="place-sl-name">[대전] 장태산 스카이워크</div>
+                      </div>
+                      <div class="place-sl-field">
+                        관광
+                      </div>
+                      <div class="card-icon-wr">
+                        <div class="place-sl-mark-wr">
+                          <div class="place-sl-mark place-sl-mark--pop">
+                            인기
+                          </div>
+                          <div class="place-sl-mark place-sl-mark--rec">
+                            추천
+                          </div>
+                        </div>
+                        <button type="button" class="live-fav-btn" onclick="liveBtn()"><span
+                            class="sound_only">즐겨찾기</span></button>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="sub-card-li mypage-card-li">
+                    <a href="/sub/tour_view.php" class="place-sl-inner">
+                      <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
+                      <div class="place-sl-info-wr">
+                        <div class="place-sl-condition">쾌적</div>
+                        <div class="place-sl-weather-wr">
+                          <div class="place-sl-temperature">28˚</div>
+                          <div class="place-sl-sky-wr">
+                            <p>현재날씨</p>
+                            <p class="place-sl-sky">맑음</p>
+                          </div>
+                        </div>
+                        <div class="place-sl-name">[대전] 장태산 스카이워크</div>
+                      </div>
+                      <div class="place-sl-field">
+                        관광
+                      </div>
+                      <div class="card-icon-wr">
+                        <div class="place-sl-mark-wr">
+                          <div class="place-sl-mark place-sl-mark--pop">
+                            인기
+                          </div>
+                          <div class="place-sl-mark place-sl-mark--rec">
+                            추천
+                          </div>
+                        </div>
+                        <button type="button" class="live-fav-btn" onclick="liveBtn()"><span
+                            class="sound_only">즐겨찾기</span></button>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="sub-card-li mypage-card-li">
+                    <a href="/sub/tour_view.php" class="place-sl-inner">
+                      <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
+                      <div class="place-sl-info-wr">
+                        <div class="place-sl-condition">쾌적</div>
+                        <div class="place-sl-weather-wr">
+                          <div class="place-sl-temperature">28˚</div>
+                          <div class="place-sl-sky-wr">
+                            <p>현재날씨</p>
+                            <p class="place-sl-sky">맑음</p>
+                          </div>
+                        </div>
+                        <div class="place-sl-name">[대전] 장태산 스카이워크</div>
+                      </div>
+                      <div class="place-sl-field">
+                        관광
+                      </div>
+                      <div class="card-icon-wr">
+                        <div class="place-sl-mark-wr">
+                          <div class="place-sl-mark place-sl-mark--pop">
+                            인기
+                          </div>
+                          <div class="place-sl-mark place-sl-mark--rec">
+                            추천
+                          </div>
+                        </div>
+                        <button type="button" class="live-fav-btn" onclick="liveBtn()"><span
+                            class="sound_only">즐겨찾기</span></button>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="sub-card-li mypage-card-li">
+                    <a href="/sub/tour_view.php" class="place-sl-inner">
+                      <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
+                      <div class="place-sl-info-wr">
+                        <div class="place-sl-condition">쾌적</div>
+                        <div class="place-sl-weather-wr">
+                          <div class="place-sl-temperature">28˚</div>
+                          <div class="place-sl-sky-wr">
+                            <p>현재날씨</p>
+                            <p class="place-sl-sky">맑음</p>
+                          </div>
+                        </div>
+                        <div class="place-sl-name">[대전] 장태산 스카이워크</div>
+                      </div>
+                      <div class="place-sl-field">
+                        관광
+                      </div>
+                      <div class="card-icon-wr">
+                        <div class="place-sl-mark-wr">
+                          <div class="place-sl-mark place-sl-mark--pop">
+                            인기
+                          </div>
+                          <div class="place-sl-mark place-sl-mark--rec">
+                            추천
+                          </div>
+                        </div>
+                        <button type="button" class="live-fav-btn" onclick="liveBtn()"><span
+                            class="sound_only">즐겨찾기</span></button>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="sub-card-li mypage-card-li">
+                    <a href="/sub/tour_view.php" class="place-sl-inner">
+                      <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
+                      <div class="place-sl-info-wr">
+                        <div class="place-sl-condition">쾌적</div>
+                        <div class="place-sl-weather-wr">
+                          <div class="place-sl-temperature">28˚</div>
+                          <div class="place-sl-sky-wr">
+                            <p>현재날씨</p>
+                            <p class="place-sl-sky">맑음</p>
+                          </div>
+                        </div>
+                        <div class="place-sl-name">[대전] 장태산 스카이워크</div>
+                      </div>
+                      <div class="place-sl-field">
+                        관광
+                      </div>
+                      <div class="card-icon-wr">
+                        <div class="place-sl-mark-wr">
+                          <div class="place-sl-mark place-sl-mark--pop">
+                            인기
+                          </div>
+                          <div class="place-sl-mark place-sl-mark--rec">
+                            추천
+                          </div>
+                        </div>
+                        <button type="button" class="live-fav-btn" onclick="liveBtn()"><span
+                            class="sound_only">즐겨찾기</span></button>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="sub-card-li mypage-card-li">
+                    <a href="/sub/tour_view.php" class="place-sl-inner">
+                      <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
+                      <div class="place-sl-info-wr">
+                        <div class="place-sl-condition">쾌적</div>
+                        <div class="place-sl-weather-wr">
+                          <div class="place-sl-temperature">28˚</div>
+                          <div class="place-sl-sky-wr">
+                            <p>현재날씨</p>
+                            <p class="place-sl-sky">맑음</p>
+                          </div>
+                        </div>
+                        <div class="place-sl-name">[대전] 장태산 스카이워크</div>
+                      </div>
+                      <div class="place-sl-field">
+                        관광
+                      </div>
+                      <div class="card-icon-wr">
+                        <div class="place-sl-mark-wr">
+                          <div class="place-sl-mark place-sl-mark--pop">
+                            인기
+                          </div>
+                          <div class="place-sl-mark place-sl-mark--rec">
+                            추천
+                          </div>
+                        </div>
+                        <button type="button" class="live-fav-btn" onclick="liveBtn()"><span
+                            class="sound_only">즐겨찾기</span></button>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="sub-card-li mypage-card-li">
+                    <a href="/sub/tour_view.php" class="place-sl-inner">
+                      <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
+                      <div class="place-sl-info-wr">
+                        <div class="place-sl-condition">쾌적</div>
+                        <div class="place-sl-weather-wr">
+                          <div class="place-sl-temperature">28˚</div>
+                          <div class="place-sl-sky-wr">
+                            <p>현재날씨</p>
+                            <p class="place-sl-sky">맑음</p>
+                          </div>
+                        </div>
+                        <div class="place-sl-name">[대전] 장태산 스카이워크</div>
+                      </div>
+                      <div class="place-sl-field">
+                        관광
+                      </div>
+                      <div class="card-icon-wr">
+                        <div class="place-sl-mark-wr">
+                          <div class="place-sl-mark place-sl-mark--pop">
+                            인기
+                          </div>
+                          <div class="place-sl-mark place-sl-mark--rec">
+                            추천
+                          </div>
+                        </div>
+                        <button type="button" class="live-fav-btn" onclick="liveBtn()"><span
+                            class="sound_only">즐겨찾기</span></button>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="sub-card-li mypage-card-li">
+                    <a href="/sub/tour_view.php" class="place-sl-inner">
+                      <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
+                      <div class="place-sl-info-wr">
+                        <div class="place-sl-condition">쾌적</div>
+                        <div class="place-sl-weather-wr">
+                          <div class="place-sl-temperature">28˚</div>
+                          <div class="place-sl-sky-wr">
+                            <p>현재날씨</p>
+                            <p class="place-sl-sky">맑음</p>
+                          </div>
+                        </div>
+                        <div class="place-sl-name">[대전] 장태산 스카이워크</div>
+                      </div>
+                      <div class="place-sl-field">
+                        관광
+                      </div>
+                      <div class="card-icon-wr">
+                        <div class="place-sl-mark-wr">
+                          <div class="place-sl-mark place-sl-mark--pop">
+                            인기
+                          </div>
+                          <div class="place-sl-mark place-sl-mark--rec">
+                            추천
+                          </div>
+                        </div>
+                        <button type="button" class="live-fav-btn" onclick="liveBtn()"><span
+                            class="sound_only">즐겨찾기</span></button>
+                      </div>
+                    </a>
+                  </li>
+                  <li class="sub-card-li mypage-card-li">
+                    <a href="/sub/tour_view.php" class="place-sl-inner">
+                      <div class="place-sl-img"><img src="https://picsum.photos/id/25/500/700" alt=""></div>
+                      <div class="place-sl-info-wr">
+                        <div class="place-sl-condition">쾌적</div>
+                        <div class="place-sl-weather-wr">
+                          <div class="place-sl-temperature">28˚</div>
+                          <div class="place-sl-sky-wr">
+                            <p>현재날씨</p>
+                            <p class="place-sl-sky">맑음</p>
+                          </div>
+                        </div>
+                        <div class="place-sl-name">[대전] 장태산 스카이워크</div>
+                      </div>
+                      <div class="place-sl-field">
+                        관광
+                      </div>
+                      <div class="card-icon-wr">
+                        <div class="place-sl-mark-wr">
+                          <div class="place-sl-mark place-sl-mark--pop">
+                            인기
+                          </div>
+                          <div class="place-sl-mark place-sl-mark--rec">
+                            추천
+                          </div>
+                        </div>
+                        <button type="button" class="live-fav-btn" onclick="liveBtn()"><span
+                            class="sound_only">즐겨찾기</span></button>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- paging { -->
+            <div class="sub-paging-wr">
+              <ul class="sub-paging-ul">
+                <li class="sub-paging-li circle start">
+                  <a href="">
+                    <img src="/source/img/icon-paging_start.png" alt="처음">
+                  </a>
+                </li>
+                <li class="sub-paging-li circle prev">
+                  <a href="">
+                    <img src="/source/img/icon-cal_prev.png" alt="이전">
+                  </a>
+                </li>
+                <li class="sub-paging-li active">
+                  <a href=""><span>1</span></a>
+                </li>
+                <li class="sub-paging-li">
+                  <a href=""><span>2</span></a>
+                </li>
+                <li class="sub-paging-li">
+                  <a href=""><span>3</span></a>
+                </li>
+                <li class="sub-paging-li">
+                  <a href=""><span>4</span></a>
+                </li>
+                <li class="sub-paging-li">
+                  <a href=""><span>5</span></a>
+                </li>
+                <li class="sub-paging-li circle next">
+                  <a href="">
+                    <img src="/source/img/icon-cal_next.png" alt="다음">
+                  </a>
+                </li>
+                <li class="sub-paging-li circle end">
+                  <a href="">
+                    <img src="/source/img/icon-paging_end.png" alt="맨끝">
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- } paging -->
+
+          </div>
+        </div>
+
+      </div>
+      <!-- } 마이페이지 끝 -->
+    </div>
+  </div>
+
+  <!-- 비밀번호 변경 팝업 { -->
+  <div class="mypage-pswd-pop-wr pop-wr">
+    <div class="dim"></div>
+    <form action="">
+      <div class="mypage-pswd-pop pop">
+        <button type="button" class="pop-close-btn" onclick="closePopup(this)"></button>
+        <div class="mypage-pswd-pop-top">
+          <p class="mypage-pswd-top-txt1">비밀번호 변경</p>
+          <p class="mypage-pswd-top-txt2">영문 / 숫자 / 특수문자 조합으로 8~15자리로 기입해주세요.</p>
+        </div>
+        <ul class="mypage-pswd-pop-ul">
+          <li class="mypage-pswd-pop-li">
+            <div class="mypage-pswd-pop-li-l">
+              새 비밀번호
+            </div>
+            <div class="mypage-pswd-pop-li-r">
+              <input type="password" name="" id="" value="" placeholder="새 비밀번호를 입력해 주세요." class="nalgaem-input w380">
+            </div>
+          </li>
+          <li class="mypage-pswd-pop-li">
+            <div class="mypage-pswd-pop-li-l">
+              새 비밀번호 확인
+            </div>
+            <div class="mypage-pswd-pop-li-r">
+              <input type="password" name="" id="" value="" placeholder="새 비밀번호를 다시 입력해 주세요."
+                class="nalgaem-input w380">
+            </div>
+          </li>
+        </ul>
+        <div class="pop-btn-wr">
+          <button type="submit" class="cafe-opt-pop-btn black">확인</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!-- } 비밀번호 변경 팝업 -->
+
+
+  <!-- footer 임시 인클루드 {-->
+  <div id="footer-loaction"></div>
+  <!-- } footer 임시 인클루드 -->
+
+</body>
+
+</html>
