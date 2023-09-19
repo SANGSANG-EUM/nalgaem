@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날갬 마이페이지-문의내역</title>
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+  <link rel="stylesheet" href="/source/plugin/fullpage/jquery.fullpage.css">
+  <link rel="stylesheet" href="/source/plugin/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/source/plugin/datepicker/datepicker.css">
+  <link rel="stylesheet" href="/source/css/fonts.css">
+  <link rel="stylesheet" href="/source/css/common.css">
+  <link rel="stylesheet" href="/source/css/normal.css">
+  <link rel="stylesheet" href="/source/css/responisve.css">
+
+  <script charset="UTF-8" class="daum_roughmap_loader_script"
+    src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+  <script src="/source/js/jquery-3.7.0.min.js"></script>
+  <script src="/source/plugin/datepicker/datepicker.js"></script>
+  <script src="/source/plugin/fullpage/jquery.fullpage.js"></script>
+  <script src="/source/plugin/matchheight/jquery.matchHeight.js"></script>
+  <script src="/source/plugin/swiper/swiper-bundle.min.js"></script>
+  <script src="/source/js/slide.js"></script>
+  <script src="/source/js/normal.js"></script>
+
+  <!-- header, footer 임시 인클루드 -->
+  <script>
+    $(document).ready(function () {
+      $('#header-loaction').load("../include/header.html");
+    });
+    $(document).ready(function () {
+      $('#footer-loaction').load("../include/footer.html");
+    });
+  </script>
+</head>
+
+<body>
+
+  <!-- header 임시 인클루드 { -->
+  <div id="header-loaction"></div>
+  <!-- } header 임시 인클루드 -->
+
+  <div class="container sub mypage">
+    <div class="subwr">
+      <!-- 마이페이지 시작 { -->
+      <div id="con_lf">
+        <h2 class="mypage-tit">마이페이지</h2>
+
+        <div class="mypage-inner">
+
+
+          <!-- 좌측메뉴 시작 { -->
+          <div class="mypage-aside-wr">
+            <aside id="aside">
+              <ul class="mypage-aside-ul">
+                <li class="mypage-aside-li sub-cate-li">
+                  <a href="/mypage/mypage_main.html">기본정보</a>
+                </li>
+                <li class="mypage-aside-li sub-cate-li active">
+                  <a href="/mypage/mypage_bookmark.html">관심목록</a>
+                </li>
+                <li class="mypage-aside-li sub-cate-li ">
+                  <a href="/mypage/mypage_order.html">주문내역</a>
+                </li>
+                <li class="mypage-aside-li sub-cate-li ">
+                  <a href="/mypage/mypage_inquiry_list.html">문의내역</a>
+                </li>
+              </ul>
+            </aside>
+          </div>
+          <!-- } 좌측메뉴 끝 -->
+
+          <div class="mypage-cnt-wr">
+
+            <div class="mypage-top-wr">
+              <div class="mypage-top-info">
+                <div class="mypage-top-info-l">
+                  <p class="mypage-top-gretting">안녕하세요! 반가워요, <b>홍길동</b>님</p>
+                  <p class="mypage-top-name">아이디 표시 (닉네임 표시)</p>
+                </div>
+                <div class="mypage-top-info-r">
+                  <a href="/mypage/mypage_edit.html" class="mypage-top-region"># 내 관심지역<img
+                      src="/source/img/icon-arrow_mytopinfo.png" alt="이동"></a>
+                  <div class="myhash-wr"><span class="myhash"># 서울</span><span class="myhash"># 대전</span><span
+                      class="myhash"># 제주도</span></div>
+                </div>
+              </div>
+              <div class="mypage-top-edit">
+                <a href="/mypage/mypage_edit.html" class="cafe-opt-pop-btn black">정보
+                  수정</a>
+              </div>
+            </div>
+
+            <div class="mypage-box">
+              <div class="mypage-box-tit-wr">
+                <div class="mypage-box-tit">문의 내역</div>
+              </div>
+              <div class="mypage-box-cnt">
+                <div class="nalgaem-table-wr">
+                  <table class="nalgaem-table">
+                    <colgroup>
+                      <col width="13%">
+                      <col width="42%">
+                      <col width="18%">
+                      <col width="11%">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>문의유형</th>
+                        <th>제목</th>
+                        <th>등록일</th>
+                        <th>상태</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <!-- 한 쌍의 제목/내용 { -->
+                      <!-- icon-status 상태 제어 : status1 클래스 (대기) / status2 클래스 (완료) -->
+                      <tr class="mypage-qna-btn">
+                        <td>입점 문의</td>
+                        <td class="td-subject">입점 신청 문의 드립니다.</td>
+                        <td>2023-10-01</td>
+                        <td><span class="icon-status status2">완료</span></td>
+                      </tr>
+                      <tr class="mypage-qna-hidden">
+                        <td colspan="4">
+                          <div class="mypage-qna-inner">
+                            <div class="mypage-qna-cnt q">
+                              <div class="mypage-qna-cnt-l">Q.</div>
+                              <div class="mypage-qna-cnt-r">안녕하세요 어쩌구 저쩌구 내용입니다~</div>
+                            </div>
+                            <div class="mypage-qna-cnt a">
+                              <div class="mypage-qna-cnt-l">A.</div>
+                              <div class="mypage-qna-cnt-r">안녕하세요 어쩌구 저쩌구 답변입니다~</div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <!-- } 한 쌍의 제목/내용 -->
+                      <tr class="mypage-qna-btn">
+                        <td>입점 문의</td>
+                        <td class="td-subject">입점 신청 문의 드립니다.</td>
+                        <td>2023-10-01</td>
+                        <td><span class="icon-status status1">대기</span></td>
+                      </tr>
+                      <tr class="mypage-qna-hidden">
+                        <td colspan="4">
+                          <div class="mypage-qna-inner">
+                            <div class="mypage-qna-cnt q">
+                              <div class="mypage-qna-cnt-l">Q.</div>
+                              <div class="mypage-qna-cnt-r">안녕하세요 어쩌구 저쩌구 내용입니다~</div>
+                            </div>
+                            <div class="mypage-qna-cnt a">
+                              <div class="mypage-qna-cnt-l">A.</div>
+                              <div class="mypage-qna-cnt-r">답변대기중</div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="mypage-qna-btn">
+                        <td>입점 문의</td>
+                        <td class="td-subject">입점 신청 문의 드립니다.</td>
+                        <td>2023-10-01</td>
+                        <td><span class="icon-status status1">대기</span></td>
+                      </tr>
+                      <tr class="mypage-qna-hidden">
+                        <td colspan="4">
+                          <div class="mypage-qna-inner">
+                            <div class="mypage-qna-cnt q">
+                              <div class="mypage-qna-cnt-l">Q.</div>
+                              <div class="mypage-qna-cnt-r">안녕하세요 어쩌구 저쩌구 내용입니다~</div>
+                            </div>
+                            <div class="mypage-qna-cnt a">
+                              <div class="mypage-qna-cnt-l">A.</div>
+                              <div class="mypage-qna-cnt-r">답변대기중</div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="mypage-qna-btn">
+                        <td>입점 문의</td>
+                        <td class="td-subject">입점 신청 문의 드립니다.</td>
+                        <td>2023-10-01</td>
+                        <td><span class="icon-status status1">대기</span></td>
+                      </tr>
+                      <tr class="mypage-qna-hidden">
+                        <td colspan="4">
+                          <div class="mypage-qna-inner">
+                            <div class="mypage-qna-cnt q">
+                              <div class="mypage-qna-cnt-l">Q.</div>
+                              <div class="mypage-qna-cnt-r">안녕하세요 어쩌구 저쩌구 내용입니다~</div>
+                            </div>
+                            <div class="mypage-qna-cnt a">
+                              <div class="mypage-qna-cnt-l">A.</div>
+                              <div class="mypage-qna-cnt-r">안녕하세요 어쩌구 저쩌구 답변입니다~</div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="mypage-qna-btn">
+                        <td>입점 문의</td>
+                        <td class="td-subject">입점 신청 문의 드립니다.</td>
+                        <td>2023-10-01</td>
+                        <td><span class="icon-status status1">대기</span></td>
+                      </tr>
+                      <tr class="mypage-qna-hidden">
+                        <td colspan="4">
+                          <div class="mypage-qna-inner">
+                            <div class="mypage-qna-cnt q">
+                              <div class="mypage-qna-cnt-l">Q.</div>
+                              <div class="mypage-qna-cnt-r">안녕하세요 어쩌구 저쩌구 내용입니다~</div>
+                            </div>
+                            <div class="mypage-qna-cnt a">
+                              <div class="mypage-qna-cnt-l">A.</div>
+                              <div class="mypage-qna-cnt-r">안녕하세요 어쩌구 저쩌구 답변입니다~</div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="mypage-qna-btn">
+                        <td>입점 문의</td>
+                        <td class="td-subject">입점 신청 문의 드립니다.</td>
+                        <td>2023-10-01</td>
+                        <td><span class="icon-status status1">대기</span></td>
+                      </tr>
+                      <tr class="mypage-qna-hidden">
+                        <td colspan="4">
+                          <div class="mypage-qna-inner">
+                            <div class="mypage-qna-cnt q">
+                              <div class="mypage-qna-cnt-l">Q.</div>
+                              <div class="mypage-qna-cnt-r">안녕하세요 어쩌구 저쩌구 내용입니다~</div>
+                            </div>
+                            <div class="mypage-qna-cnt a">
+                              <div class="mypage-qna-cnt-l">A.</div>
+                              <div class="mypage-qna-cnt-r">안녕하세요 어쩌구 저쩌구 답변입니다~</div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="mypage-qna-btn">
+                        <td>입점 문의</td>
+                        <td class="td-subject">입점 신청 문의 드립니다.</td>
+                        <td>2023-10-01</td>
+                        <td><span class="icon-status status1">대기</span></td>
+                      </tr>
+                      <tr class="mypage-qna-hidden">
+                        <td colspan="4">
+                          <div class="mypage-qna-inner">
+                            <div class="mypage-qna-cnt q">
+                              <div class="mypage-qna-cnt-l">Q.</div>
+                              <div class="mypage-qna-cnt-r">안녕하세요 어쩌구 저쩌구 내용입니다~</div>
+                            </div>
+                            <div class="mypage-qna-cnt a">
+                              <div class="mypage-qna-cnt-l">A.</div>
+                              <div class="mypage-qna-cnt-r">안녕하세요 어쩌구 저쩌구 답변입니다~</div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="mypage-qna-btn">
+                        <td>입점 문의</td>
+                        <td class="td-subject">입점 신청 문의 드립니다.</td>
+                        <td>2023-10-01</td>
+                        <td><span class="icon-status status1">대기</span></td>
+                      </tr>
+                      <tr class="mypage-qna-hidden">
+                        <td colspan="4">
+                          <div class="mypage-qna-inner">
+                            <div class="mypage-qna-cnt q">
+                              <div class="mypage-qna-cnt-l">Q.</div>
+                              <div class="mypage-qna-cnt-r">안녕하세요 어쩌구 저쩌구 내용입니다~</div>
+                            </div>
+                            <div class="mypage-qna-cnt a">
+                              <div class="mypage-qna-cnt-l">A.</div>
+                              <div class="mypage-qna-cnt-r">안녕하세요 어쩌구 저쩌구 답변입니다~</div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="mypage-qna-btn">
+                        <td>입점 문의</td>
+                        <td class="td-subject">입점 신청 문의 드립니다.</td>
+                        <td>2023-10-01</td>
+                        <td><span class="icon-status status1">대기</span></td>
+                      </tr>
+                      <tr class="mypage-qna-hidden">
+                        <td colspan="4">
+                          <div class="mypage-qna-inner">
+                            <div class="mypage-qna-cnt q">
+                              <div class="mypage-qna-cnt-l">Q.</div>
+                              <div class="mypage-qna-cnt-r">안녕하세요 어쩌구 저쩌구 내용입니다~</div>
+                            </div>
+                            <div class="mypage-qna-cnt a">
+                              <div class="mypage-qna-cnt-l">A.</div>
+                              <div class="mypage-qna-cnt-r">안녕하세요 어쩌구 저쩌구 답변입니다~</div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                      <tr class="mypage-qna-btn">
+                        <td>입점 문의</td>
+                        <td class="td-subject">입점 신청 문의 드립니다.</td>
+                        <td>2023-10-01</td>
+                        <td><span class="icon-status status1">대기</span></td>
+                      </tr>
+                      <tr class="mypage-qna-hidden">
+                        <td colspan="4">
+                          <div class="mypage-qna-inner">
+                            <div class="mypage-qna-cnt q">
+                              <div class="mypage-qna-cnt-l">Q.</div>
+                              <div class="mypage-qna-cnt-r">안녕하세요 어쩌구 저쩌구 내용입니다~</div>
+                            </div>
+                            <div class="mypage-qna-cnt a">
+                              <div class="mypage-qna-cnt-l">A.</div>
+                              <div class="mypage-qna-cnt-r">안녕하세요 어쩌구 저쩌구 답변입니다~</div>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="mypage-main-qna-box">
+                <div class="mypage-main-qna-txt">
+                  문의 사항이 있으시면 언제든지 물어보세요. <br>
+                  친절히 답변드리겠습니다.
+                </div>
+                <a href="/mypage/mypage_inquiry_write.html" class="mypage-main-qna-link cafe-opt-pop-btn">1:1 문의</a>
+              </div>
+            </div>
+
+            <!-- paging { -->
+            <div class="sub-paging-wr">
+              <ul class="sub-paging-ul">
+                <li class="sub-paging-li circle start">
+                  <a href="">
+                    <img src="/source/img/icon-paging_start.png" alt="처음">
+                  </a>
+                </li>
+                <li class="sub-paging-li circle prev">
+                  <a href="">
+                    <img src="/source/img/icon-cal_prev.png" alt="이전">
+                  </a>
+                </li>
+                <li class="sub-paging-li active">
+                  <a href=""><span>1</span></a>
+                </li>
+                <li class="sub-paging-li">
+                  <a href=""><span>2</span></a>
+                </li>
+                <li class="sub-paging-li">
+                  <a href=""><span>3</span></a>
+                </li>
+                <li class="sub-paging-li">
+                  <a href=""><span>4</span></a>
+                </li>
+                <li class="sub-paging-li">
+                  <a href=""><span>5</span></a>
+                </li>
+                <li class="sub-paging-li circle next">
+                  <a href="">
+                    <img src="/source/img/icon-cal_next.png" alt="다음">
+                  </a>
+                </li>
+                <li class="sub-paging-li circle end">
+                  <a href="">
+                    <img src="/source/img/icon-paging_end.png" alt="맨끝">
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- } paging -->
+
+          </div>
+        </div>
+
+      </div>
+      <!-- } 마이페이지 끝 -->
+    </div>
+  </div>
+
+  <script>
+    // 문의내역 아코디언
+    $('.mypage-qna-btn').on('click', function () {
+      let myQnaCnt = $(this).next('.mypage-qna-hidden');
+      if (myQnaCnt.hasClass('open')) {
+        myQnaCnt.removeClass('open').find('.mypage-qna-inner').stop().slideUp();
+      } else {
+        $('.mypage-qna-hidden').removeClass('open');
+        $('.mypage-qna-inner').stop().slideUp();
+        myQnaCnt.addClass('open').find('.mypage-qna-inner').stop().slideDown();
+      }
+    });
+  </script>
+
+  <!-- footer 임시 인클루드 {-->
+  <div id="footer-loaction"></div>
+  <!-- } footer 임시 인클루드 -->
+
+</body>
+
+</html>

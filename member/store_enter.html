@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날갬-입점신청</title>
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+  <link rel="stylesheet" href="/source/plugin/fullpage/jquery.fullpage.css">
+  <link rel="stylesheet" href="/source/plugin/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/source/plugin/datepicker/datepicker.css">
+  <link rel="stylesheet" href="/source/css/fonts.css">
+  <link rel="stylesheet" href="/source/css/common.css">
+  <link rel="stylesheet" href="/source/css/normal.css">
+  <link rel="stylesheet" href="/source/css/responisve.css">
+
+  <script charset="UTF-8" class="daum_roughmap_loader_script"
+    src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+  <script src="/source/js/jquery-3.7.0.min.js"></script>
+  <script src="/source/plugin/datepicker/datepicker.js"></script>
+  <script src="/source/plugin/fullpage/jquery.fullpage.js"></script>
+  <script src="/source/plugin/matchheight/jquery.matchHeight.js"></script>
+  <script src="/source/plugin/swiper/swiper-bundle.min.js"></script>
+  <script src="/source/js/slide.js"></script>
+  <script src="/source/js/normal.js"></script>
+
+  <!-- header, footer 임시 인클루드 -->
+  <script>
+    $(document).ready(function () {
+      $('#header-loaction').load("../include/header.html");
+    });
+    $(document).ready(function () {
+      $('#footer-loaction').load("../include/footer.html");
+    });
+  </script>
+</head>
+
+<body>
+
+  <!-- header 임시 인클루드 { -->
+  <div id="header-loaction"></div>
+  <!-- } header 임시 인클루드 -->
+
+  <div class="container sub">
+    <div class="regwr">
+      <div class="member-tit-wr">
+        <div class="member-tit"><b>날갬 입점신청</b></div>
+      </div>
+      <form name="">
+
+        <div class="store-write-wr mypage-box-wr">
+          <div class="mypage-box">
+            <div class="mypage-box-tit-wr">
+              <div class="mypage-box-tit">사업자 정보</div>
+            </div>
+            <div class="mypage-box-cnt">
+              <ul class="mypage-list-ul">
+                <li class="mypage-list-li">
+                  <div class="mypage-list-li-l">
+                    <p class="mypage-list-li-l-txt1 mypage-bigtxt">첨부파일</p>
+                  </div>
+                  <div class="mypage-list-li-r">
+                    <div class="mypage-list-input-wr">
+                      <div class="file-wr">
+                        <div class="file-input-wr">
+                          <input type="file" name="" id="file1" class="file-input" multiple>
+                          <label for="file1" class="file-btn">파일추가</label>
+                        </div>
+                        <div class="file-txt-wr">
+                          <ul class="file-txt-ul file-txt-ul1">
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="mypage-list-li">
+                  <div class="mypage-list-li-l">
+                    <p class="mypage-list-li-l-txt1 mypage-bigtxt">대표자 명</p>
+                  </div>
+                  <div class="mypage-list-li-r">
+                    <div class="mypage-list-input-wr">
+                      <input type="text" name="" id="" value="" placeholder="대표자 이름을 입력해 주세요."
+                        class="nalgaem-input w380">
+                    </div>
+                  </div>
+                </li>
+                <li class="mypage-list-li">
+                  <div class="mypage-list-li-l">
+                    <p class="mypage-list-li-l-txt1 mypage-bigtxt">상호명</p>
+                  </div>
+                  <div class="mypage-list-li-r">
+                    <div class="mypage-list-input-wr">
+                      <input type="text" name="" id="" value="" placeholder="상호명을 입력해 주세요." class="nalgaem-input w380">
+                    </div>
+                  </div>
+                </li>
+                <li class="mypage-list-li">
+                  <div class="mypage-list-li-l">
+                    <p class="mypage-list-li-l-txt1 mypage-bigtxt">주소</p>
+                  </div>
+                  <div class="mypage-list-li-r">
+                    <div class="mypage-list-input-wr">
+                      <input type="text" name="" id="postcode" value="" placeholder="우편번호를 검색해 주세요." class="nalgaem-input w200">
+                      <button type="button" class="my-mini-btn white" onclick="execDaumPostcode()">우편번호</button>
+                    </div>
+                    <div class="mypage-list-input-wr">
+                      <input type="text" name="" id="address" value="" placeholder="기본 주소를 입력해 주세요."
+                        class="nalgaem-input w380">
+                    </div>
+                    <div class="mypage-list-input-wr">
+                      <input type="text" name="" id="detailAddress" value="" placeholder="나머지 주소를 입력해 주세요." class="nalgaem-input w380">
+                      <input type="hidden" name="" id="extraAddress" value="" class="nalgaem-input w380">
+                    </div>
+                    <div id="addrWrap">
+                      <img src="//t1.daumcdn.net/postcode/resource/images/close.png" id="btnFoldWrap" style="cursor:pointer;position:absolute;right:0px;top:-1px;z-index:1" onclick="foldDaumPostcode()" alt="접기 버튼">
+                      </div>
+                  </div>
+                </li>
+                <li class="mypage-list-li">
+                  <div class="mypage-list-li-l">
+                    <p class="mypage-list-li-l-txt1 mypage-bigtxt">통신판매업신고번호</p>
+                  </div>
+                  <div class="mypage-list-li-r">
+                    <div class="mypage-list-input-wr">
+                      <div class="file-wr">
+                        <div class="file-input-wr">
+                          <input type="file" name="" id="file2" class="file-input" multiple>
+                          <label for="file2" class="file-btn">파일추가</label>
+                        </div>
+                        <div class="file-txt-wr">
+                          <ul class="file-txt-ul2">
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="mypage-list-li">
+                  <div class="mypage-list-li-l">
+                    <p class="mypage-list-li-l-txt1 mypage-bigtxt">담당자 명</p>
+                  </div>
+                  <div class="mypage-list-li-r">
+                    <div class="mypage-list-input-wr">
+                      <input type="text" name="" id="" value="" placeholder="담당자 이름을 입력해 주세요."
+                        class="nalgaem-input w380">
+                    </div>
+                  </div>
+                </li>
+                <li class="mypage-list-li">
+                  <div class="mypage-list-li-l">
+                    <p class="mypage-list-li-l-txt1 mypage-bigtxt">정산계좌</p>
+                  </div>
+                  <div class="mypage-list-li-r">
+                    <div class="mypage-list-input-wr">
+                      <select name="" id="" required="" class="nalgaem-input w280">
+                        <option value="" disabled="" selected="">은행을 선택해 주세요.</option>
+                        <option value="">은행1</option>
+                        <option value="">은행2</option>
+                        <option value="">은행3</option>
+                      </select>
+                    </div>
+                    <div class="mypage-list-input-wr">
+                      <input type="text" name="" id="" value="" placeholder="예금주명을 입력해 주세요." class="nalgaem-input w380">
+                    </div>
+                    <div class="mypage-list-input-wr">
+                      <input type="text" name="" id="" value="" placeholder="계좌번호를 입력해 주세요.('-'를 제외)"
+                        class="nalgaem-input w380">
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <ul class="mypage-box-under-ul">
+              <li class="mypage-box-under-li withdrawal-check-li">
+                주의사항 또는 안내사항 문구 입력 영역입니다.
+              </li>
+              <li class="mypage-box-under-li withdrawal-check-li">
+                주의사항 또는 안내사항 문구 입력 영역입니다.
+              </li>
+              <li class="mypage-box-under-li withdrawal-check-li">
+                주의사항 또는 안내사항 문구 입력 영역입니다.
+              </li>
+              <li class="mypage-box-under-li withdrawal-check-li">
+                주의사항 또는 안내사항 문구 입력 영역입니다.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="nalgaem-btn-list-wr mypage-submit-wr">
+          <!-- a태그 / button 태그 중 택 1 하여 사용 -->
+          <a href="/member/store_complete.html" class="nalgaem-btn-list mypage-submit-btn">작성완료</a>
+          <!-- <button type="submit" id="" class="snalgaem-btn-list mypage-submit-btn">작성완료</button> -->
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- footer 임시 인클루드 {-->
+  <div id="footer-loaction"></div>
+  <!-- } footer 임시 인클루드 -->
+
+  <script>
+    $(document).ready(function () {
+      // 첫 번째 파일 목록을 저장할 배열
+      var fileList1 = [];
+      var maxFiles1 = 3; // 첫 번째 영역의 최대 파일 수
+
+      // 파일 추가 및 삭제 시 파일 목록을 콘솔에 출력하는 함수 - 첫 번째 영역용
+      function printFileList1() {
+        console.log('파일 목록 1:');
+        fileList1.forEach(function (file) {
+          console.log(file.name);
+        });
+      }
+
+      // input[type=file]의 변경(파일 선택) 이벤트 핸들러 추가 - 첫 번째 영역용
+      $('#file1').change(function () {
+        // 이 부분을 첫 번째 영역의 파일 목록과 관련된 코드로 수정합니다.
+        var files = $('#file1')[0].files; // 선택한 파일 목록 가져오기
+        var fileTxtUl = $('.file-txt-ul1'); // 파일명 목록을 표시할 <ul> 요소
+
+        // 현재 파일 목록에 추가된 파일 갯수
+        var currentFileCount = fileList1.length;
+
+        // 선택한 파일 목록을 순회하며 파일명을 <ul>에 추가
+        for (var i = 0; i < files.length; i++) {
+          if (currentFileCount < maxFiles1) {
+            var fileName = files[i].name;
+            var listItem = $('<li class="file-txt-li"><p>' + fileName +
+              '</p><button type="button" class="file-delete-btn"><span></span></button></li>');
+            fileTxtUl.append(listItem);
+
+            // 파일 목록에 파일 추가
+            fileList1.push(files[i]);
+            currentFileCount++;
+
+            // 파일 목록 출력
+            printFileList1();
+          } else {
+            alert('첨부파일 1: 최대 ' + maxFiles1 + '개의 파일만 첨부할 수 있습니다.');
+            break;
+          }
+        }
+
+        // input[type=file] 초기화 (같은 파일을 다시 선택할 수 있도록)
+        $('#file1').val('');
+      });
+
+      // 삭제 버튼 클릭 시 해당 파일을 파일 목록에서 삭제 - 첫 번째 영역용
+      $('.file-txt-ul1').on('click', '.file-delete-btn', function () {
+        // 이 부분을 첫 번째 영역의 파일 목록과 관련된 코드로 수정합니다.
+        var deletedFileName = $(this).prev('p').text(); // 삭제된 파일명 가져오기
+        $(this).parent().remove();
+
+        // 파일 목록에서 삭제
+        fileList1 = fileList1.filter(function (file) {
+          return file.name !== deletedFileName;
+        });
+
+        // 파일 목록 출력
+        printFileList1();
+      });
+
+      // 두 번째 파일 목록을 저장할 배열
+      var fileList2 = [];
+      var maxFiles2 = 3; // 두 번째 영역의 최대 파일 수
+
+      // 파일 추가 및 삭제 시 파일 목록을 콘솔에 출력하는 함수 - 두 번째 영역용
+      function printFileList2() {
+        console.log('파일 목록 2:');
+        fileList2.forEach(function (file) {
+          console.log(file.name);
+        });
+      }
+
+      // input[type=file]의 변경(파일 선택) 이벤트 핸들러 추가 - 두 번째 영역용
+      $('#file2').change(function () {
+        // 이 부분을 두 번째 영역의 파일 목록과 관련된 코드로 수정합니다.
+        var files = $('#file2')[0].files; // 선택한 파일 목록 가져오기
+        var fileTxtUl = $('.file-txt-ul2'); // 파일명 목록을 표시할 <ul> 요소
+
+        // 현재 파일 목록에 추가된 파일 갯수
+        var currentFileCount = fileList2.length;
+
+        // 선택한 파일 목록을 순회하며 파일명을 <ul>에 추가
+        for (var i = 0; i < files.length; i++) {
+          if (currentFileCount < maxFiles2) {
+            var fileName = files[i].name;
+            var listItem = $('<li class="file-txt-li"><p>' + fileName +
+              '</p><button type="button" class="file-delete-btn"><span></span></button></li>');
+            fileTxtUl.append(listItem);
+
+            // 파일 목록에 파일 추가
+            fileList2.push(files[i]);
+            currentFileCount++;
+
+            // 파일 목록 출력
+            printFileList2();
+          } else {
+            alert('첨부파일 2: 최대 ' + maxFiles2 + '개의 파일만 첨부할 수 있습니다.');
+            break;
+          }
+        }
+
+        // input[type=file] 초기화 (같은 파일을 다시 선택할 수 있도록)
+        $('#file2').val('');
+      });
+
+      // 삭제 버튼 클릭 시 해당 파일을 파일 목록에서 삭제 - 두 번째 영역용
+      $('.file-txt-ul2').on('click', '.file-delete-btn', function () {
+        // 이 부분을 두 번째 영역의 파일 목록과 관련된 코드로 수정합니다.
+        var deletedFileName = $(this).prev('p').text(); // 삭제된 파일명 가져오기
+        $(this).parent().remove();
+
+        // 파일 목록에서 삭제
+        fileList2 = fileList2.filter(function (file) {
+          return file.name !== deletedFileName;
+        });
+
+        // 파일 목록 출력
+        printFileList2();
+      });
+    });
+  </script>
+
+  <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+  <script>
+    // 우편번호 찾기 찾기 화면을 넣을 element
+    var element_wrap = document.getElementById('addrWrap');
+
+    function foldDaumPostcode() {
+      // iframe을 넣은 element를 안보이게 한다.
+      element_wrap.style.display = 'none';
+    }
+
+    function execDaumPostcode() {
+      // 현재 scroll 위치를 저장해놓는다.
+      var currentScroll = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+      new daum.Postcode({
+        oncomplete: function (data) {
+          // 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
+
+          // 각 주소의 노출 규칙에 따라 주소를 조합한다.
+          // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
+          var addr = ''; // 주소 변수
+          var extraAddr = ''; // 참고항목 변수
+
+          //사용자가 선택한 주소 타입에 따라 해당 주소 값을 가져온다.
+          if (data.userSelectedType === 'R') { // 사용자가 도로명 주소를 선택했을 경우
+            addr = data.roadAddress;
+          } else { // 사용자가 지번 주소를 선택했을 경우(J)
+            addr = data.jibunAddress;
+          }
+
+          // 사용자가 선택한 주소가 도로명 타입일때 참고항목을 조합한다.
+          if (data.userSelectedType === 'R') {
+            // 법정동명이 있을 경우 추가한다. (법정리는 제외)
+            // 법정동의 경우 마지막 문자가 "동/로/가"로 끝난다.
+            if (data.bname !== '' && /[동|로|가]$/g.test(data.bname)) {
+              extraAddr += data.bname;
+            }
+            // 건물명이 있고, 공동주택일 경우 추가한다.
+            if (data.buildingName !== '' && data.apartment === 'Y') {
+              extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
+            }
+            // 표시할 참고항목이 있을 경우, 괄호까지 추가한 최종 문자열을 만든다.
+            if (extraAddr !== '') {
+              extraAddr = ' (' + extraAddr + ')';
+            }
+            // 조합된 참고항목을 해당 필드에 넣는다.
+            document.getElementById("extraAddress").value = extraAddr;
+
+          } else {
+            document.getElementById("extraAddress").value = '';
+          }
+
+          // 우편번호와 주소 정보를 해당 필드에 넣는다.
+          document.getElementById('postcode').value = data.zonecode;
+          document.getElementById("address").value = addr;
+          // 커서를 상세주소 필드로 이동한다.
+          document.getElementById("detailAddress").focus();
+
+          // iframe을 넣은 element를 안보이게 한다.
+          // (autoClose:false 기능을 이용한다면, 아래 코드를 제거해야 화면에서 사라지지 않는다.)
+          element_wrap.style.display = 'none';
+
+          // 우편번호 찾기 화면이 보이기 이전으로 scroll 위치를 되돌린다.
+          document.body.scrollTop = currentScroll;
+        },
+        // 우편번호 찾기 화면 크기가 조정되었을때 실행할 코드를 작성하는 부분. iframe을 넣은 element의 높이값을 조정한다.
+        onresize: function (size) {
+          element_wrap.style.height = size.height + 'px';
+        },
+        width: '100%',
+        height: '100%'
+      }).embed(element_wrap);
+
+      // iframe을 넣은 element를 보이게 한다.
+      element_wrap.style.display = 'block';
+    }
+  </script>
+
+</body>
+
+</html>

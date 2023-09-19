@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날갬 마이페이지-문의작성</title>
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+  <link rel="stylesheet" href="/source/plugin/fullpage/jquery.fullpage.css">
+  <link rel="stylesheet" href="/source/plugin/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/source/plugin/datepicker/datepicker.css">
+  <link rel="stylesheet" href="/source/css/fonts.css">
+  <link rel="stylesheet" href="/source/css/common.css">
+  <link rel="stylesheet" href="/source/css/normal.css">
+  <link rel="stylesheet" href="/source/css/responisve.css">
+
+  <script charset="UTF-8" class="daum_roughmap_loader_script"
+    src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+  <script src="/source/js/jquery-3.7.0.min.js"></script>
+  <script src="/source/plugin/datepicker/datepicker.js"></script>
+  <script src="/source/plugin/fullpage/jquery.fullpage.js"></script>
+  <script src="/source/plugin/matchheight/jquery.matchHeight.js"></script>
+  <script src="/source/plugin/swiper/swiper-bundle.min.js"></script>
+  <script src="/source/js/slide.js"></script>
+  <script src="/source/js/normal.js"></script>
+
+  <!-- header, footer 임시 인클루드 -->
+  <script>
+    $(document).ready(function () {
+      $('#header-loaction').load("../include/header.html");
+    });
+    $(document).ready(function () {
+      $('#footer-loaction').load("../include/footer.html");
+    });
+  </script>
+</head>
+
+<body>
+
+  <!-- header 임시 인클루드 { -->
+  <div id="header-loaction"></div>
+  <!-- } header 임시 인클루드 -->
+
+  <div class="container sub mypage">
+    <div class="subwr">
+      <!-- 마이페이지 시작 { -->
+      <div id="con_lf">
+        <h2 class="mypage-tit">마이페이지</h2>
+
+        <div class="mypage-inner">
+
+
+          <!-- 좌측메뉴 시작 { -->
+          <div class="mypage-aside-wr">
+            <aside id="aside">
+              <ul class="mypage-aside-ul">
+                <li class="mypage-aside-li sub-cate-li">
+                  <a href="/mypage/mypage_main.html">기본정보</a>
+                </li>
+                <li class="mypage-aside-li sub-cate-li active">
+                  <a href="/mypage/mypage_bookmark.html">관심목록</a>
+                </li>
+                <li class="mypage-aside-li sub-cate-li ">
+                  <a href="/mypage/mypage_order.html">주문내역</a>
+                </li>
+                <li class="mypage-aside-li sub-cate-li ">
+                  <a href="/mypage/mypage_inquiry_list.html">문의내역</a>
+                </li>
+              </ul>
+            </aside>
+          </div>
+          <!-- } 좌측메뉴 끝 -->
+
+          <div class="mypage-cnt-wr">
+
+            <div class="mypage-top-wr">
+              <div class="mypage-top-info">
+                <div class="mypage-top-info-l">
+                  <p class="mypage-top-gretting">안녕하세요! 반가워요, <b>홍길동</b>님</p>
+                  <p class="mypage-top-name">아이디 표시 (닉네임 표시)</p>
+                </div>
+                <div class="mypage-top-info-r">
+                  <a href="/mypage/mypage_edit.html" class="mypage-top-region"># 내 관심지역<img
+                      src="/source/img/icon-arrow_mytopinfo.png" alt="이동"></a>
+                  <div class="myhash-wr"><span class="myhash"># 서울</span><span class="myhash"># 대전</span><span
+                      class="myhash"># 제주도</span></div>
+                </div>
+              </div>
+              <div class="mypage-top-edit">
+                <a href="/mypage/mypage_edit.html" class="cafe-opt-pop-btn black">정보
+                  수정</a>
+              </div>
+            </div>
+
+            <form name="" multipartsenctype="multipart/form-data">
+
+              <div class="mypage-box-wr">
+                <div class="mypage-box">
+                  <div class="mypage-box-tit-wr">
+                    <div class="mypage-box-tit">1:1 문의하기</div>
+                  </div>
+                  <div class="mypage-box-cnt">
+                    <ul class="mypage-list-ul mypage-qna-ul">
+                      <li class="mypage-list-li">
+                        <div class="mypage-list-li-l">
+                          <p class="mypage-list-li-l-txt1 mypage-bigtxt">작성자</p>
+                        </div>
+                        <div class="mypage-list-li-r">
+                          <p class="mypage-list-li-r-txt1 mypage-nortxt">홍길동</p>
+                        </div>
+                      </li>
+                      <li class="mypage-list-li">
+                        <div class="mypage-list-li-l">
+                          <p class="mypage-list-li-l-txt1 mypage-bigtxt">문의유형</p>
+                        </div>
+                        <div class="mypage-list-li-r">
+                          <div class="mypage-list-input-wr">
+                            <select name="" id="" required class="nalgaem-input w500">
+                              <option value="" disabled selected>카테고리를 선택해 주세요.</option>
+                              <option value="">카테고리1</option>
+                              <option value="">카테고리2</option>
+                              <option value="">카테고리3</option>
+                            </select>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mypage-list-li">
+                        <div class="mypage-list-li-l">
+                          <p class="mypage-list-li-l-txt1 mypage-bigtxt">제목</p>
+                        </div>
+                        <div class="mypage-list-li-r">
+                          <div class="mypage-list-input-wr">
+                            <input type="text" name="" id="" value="" placeholder="제목을 입력해 주세요."
+                              class="nalgaem-input w700">
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mypage-list-li">
+                        <div class="mypage-list-li-l">
+                          <p class="mypage-list-li-l-txt1 mypage-bigtxt">문의내용</p>
+                        </div>
+                        <div class="mypage-list-li-r">
+                          <div class="mypage-list-input-wr textarea-wr">
+                            <textarea name="" id="" maxlength="4000" placeholder="내용을 입력해 주세요."
+                              class="nalgaem-input w700 mypage-qna-textarea"></textarea>
+                            <div class="mypage-qna-txtcount-wr">
+                              <span class="mypage-qna-txtcount">0</span>/4000
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li class="mypage-list-li">
+                        <div class="mypage-list-li-l">
+                          <p class="mypage-list-li-l-txt1 mypage-bigtxt">첨부파일</p>
+                        </div>
+                        <div class="mypage-list-li-r">
+                          <div class="mypage-list-input-wr">
+                            <div class="file-wr">
+                              <div class="file-input-wr">
+                                <input type="file" name="" id="file" class="file-input" multiple>
+                                <label for="file" class="file-btn">파일추가</label>
+                              </div>
+                              <div class="file-txt-wr">
+                                <ul class="file-txt-ul">
+                                  <!-- <li class="file-txt-li">
+                                    <p>파일명이 들어갑니다</p>
+                                    <button type="button">삭제</button>
+                                  </li> -->
+                                </ul>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="nalgaem-btn-list-wr mypage-submit-wr">
+                <input type="submit" value="등록하기" id="" class="nalgaem-btn-list mypage-submit-btn">
+              </div>
+
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+      <!-- } 마이페이지 끝 -->
+    </div>
+  </div>
+
+  <script>
+    $('.mypage-qna-textarea').keyup(function (e) {
+      let content = $(this).val();
+
+      // 글자수 세기
+      if (content.length == 0 || content == '') {
+        $('.mypage-qna-txtcount').text('0');
+      } else {
+        $('.mypage-qna-txtcount').text(content.length);
+      }
+
+      // 글자수 제한
+      if (content.length > 4000) {
+        // 200자 부터는 타이핑 되지 않도록
+        $(this).val($(this).val().substring(0, 4000));
+        // 200자 넘으면 알림창 뜨도록
+        alert('글자수는 4000자까지 입력 가능합니다.');
+      };
+    });
+
+    $(document).ready(function () {
+      // 파일 목록을 저장할 배열
+      var fileList = [];
+      // 최대 파일 갯수
+      var maxFiles = 3;
+
+      // 파일 추가 및 삭제 시 파일 목록을 콘솔에 출력하는 함수
+      function printFileList() {
+        console.log('파일 목록:');
+        fileList.forEach(function (file) {
+          console.log(file.name);
+        });
+      }
+
+      // input[type=file]의 변경(파일 선택) 이벤트 핸들러 추가
+      $('#file').change(function () {
+        var files = $('#file')[0].files; // 선택한 파일 목록 가져오기
+        var fileTxtUl = $('.file-txt-ul'); // 파일명 목록을 표시할 <ul> 요소
+
+        // 현재 파일 목록에 추가된 파일 갯수
+        var currentFileCount = fileList.length;
+
+        // 선택한 파일 목록을 순회하며 파일명을 <ul>에 추가
+        for (var i = 0; i < files.length; i++) {
+          if (currentFileCount < maxFiles) {
+            var fileName = files[i].name;
+            var listItem = $('<li class="file-txt-li"><p>' + fileName +
+              '</p><button type="button" class="file-delete-btn"><span></span></button></li>');
+            fileTxtUl.append(listItem);
+
+            // 파일 목록에 파일 추가
+            fileList.push(files[i]);
+            currentFileCount++;
+
+            // 파일 목록 출력
+            printFileList();
+          } else {
+            alert('최대 ' + maxFiles + '개의 파일만 첨부할 수 있습니다.');
+            break;
+          }
+        }
+
+        // input[type=file] 초기화 (같은 파일을 다시 선택할 수 있도록)
+        $('#file').val('');
+      });
+
+      // 삭제 버튼 클릭 시 해당 파일을 파일 목록에서 삭제
+      $('.file-txt-ul').on('click', '.file-delete-btn', function () {
+        var deletedFileName = $(this).prev('p').text(); // 삭제된 파일명 가져오기
+        $(this).parent().remove();
+
+        // 파일 목록에서 삭제
+        fileList = fileList.filter(function (file) {
+          return file.name !== deletedFileName;
+        });
+
+        // 파일 목록 출력
+        printFileList();
+      });
+    });
+  </script>
+
+  <!-- footer 임시 인클루드 {-->
+  <div id="footer-loaction"></div>
+  <!-- } footer 임시 인클루드 -->
+
+</body>
+
+</html>

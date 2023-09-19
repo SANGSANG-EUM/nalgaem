@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날갬-회원가입 완료</title>
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+  <link rel="stylesheet" href="/source/plugin/fullpage/jquery.fullpage.css">
+  <link rel="stylesheet" href="/source/plugin/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/source/plugin/datepicker/datepicker.css">
+  <link rel="stylesheet" href="/source/css/fonts.css">
+  <link rel="stylesheet" href="/source/css/common.css">
+  <link rel="stylesheet" href="/source/css/normal.css">
+  <link rel="stylesheet" href="/source/css/responisve.css">
+
+  <script charset="UTF-8" class="daum_roughmap_loader_script"
+    src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+  <script src="/source/js/jquery-3.7.0.min.js"></script>
+  <script src="/source/plugin/datepicker/datepicker.js"></script>
+  <script src="/source/plugin/fullpage/jquery.fullpage.js"></script>
+  <script src="/source/plugin/matchheight/jquery.matchHeight.js"></script>
+  <script src="/source/plugin/swiper/swiper-bundle.min.js"></script>
+  <script src="/source/js/slide.js"></script>
+  <script src="/source/js/normal.js"></script>
+
+  <!-- header, footer 임시 인클루드 -->
+  <script>
+    $(document).ready(function () {
+      $('#header-loaction').load("../include/header.html");
+    });
+    $(document).ready(function () {
+      $('#footer-loaction').load("../include/footer.html");
+    });
+  </script>
+</head>
+
+<body>
+
+  <!-- header 임시 인클루드 { -->
+  <div id="header-loaction"></div>
+  <!-- } header 임시 인클루드 -->
+
+  <div class="container sub">
+    <div class="regwr">
+      <div class="member-tit-wr complete-tit-wr">
+        <a href="/main.html" class="complete-logo">
+          <img src="/source/img/logo_black.png" alt="">
+        </a>
+        <div class="member-tit complete-tit">날갬의 회원이 되신걸 환영해요. <br> <b>홍길동</b>님!</div>
+      </div>
+      <div class="complete-wr">
+        <div class="compltet-txt-wr">
+          <p class="complete-txt complete-txt1">회원가입이 완료되었습니다.</p>
+          <p class="complete-txt complete-txt2">로그인 후 다양한 서비스 및 회원정보 수정이 가능합니다.</p>
+        </div>
+        <div class="complete-btn-wr">
+          <a href="/main.html" class="nalgaem-btn-list">홈으로</a>
+          <a href="/member/login.html" class="nalgaem-btn-list black">로그인 하기</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer 임시 인클루드 {-->
+  <div id="footer-loaction"></div>
+  <!-- } footer 임시 인클루드 -->
+
+</body>
+
+</html>
