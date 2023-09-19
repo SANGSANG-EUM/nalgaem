@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>날갬-로그인</title>
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/variable/pretendardvariable.css" />
+  <link rel="stylesheet" href="/source/plugin/fullpage/jquery.fullpage.css">
+  <link rel="stylesheet" href="/source/plugin/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="/source/plugin/datepicker/datepicker.css">
+  <link rel="stylesheet" href="/source/css/fonts.css">
+  <link rel="stylesheet" href="/source/css/common.css">
+  <link rel="stylesheet" href="/source/css/normal.css">
+  <link rel="stylesheet" href="/source/css/responisve.css">
+
+  <script charset="UTF-8" class="daum_roughmap_loader_script"
+    src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+  <script src="/source/js/jquery-3.7.0.min.js"></script>
+  <script src="/source/plugin/datepicker/datepicker.js"></script>
+  <script src="/source/plugin/fullpage/jquery.fullpage.js"></script>
+  <script src="/source/plugin/matchheight/jquery.matchHeight.js"></script>
+  <script src="/source/plugin/swiper/swiper-bundle.min.js"></script>
+  <script src="/source/js/slide.js"></script>
+  <script src="/source/js/normal.js"></script>
+
+  <!-- header, footer 임시 인클루드 -->
+  <script>
+    $(document).ready(function () {
+      $('#header-loaction').load("../include/header.html");
+    });
+    $(document).ready(function () {
+      $('#footer-loaction').load("../include/footer.html");
+    });
+  </script> 
+</head>
+
+<body>
+
+  <!-- header 임시 인클루드 { -->
+  <!-- <div id="header-loaction"></div> -->
+  <!-- } header 임시 인클루드 -->
+
+  <div class="container sub">
+    <div class="regwr">
+      <div class="login-wr">
+        <a href="/main.html" class="login-logo">
+          <img src="/source/img/logo_black.png" alt="">
+        </a>
+        <div class="login-box">
+          <p class="mypage-box-tit">로그인</p>
+          <form action="">
+            <div class="login-write">
+              <div class="login-input-wr login-input-wr-id">
+                <input type="text" class="login-input" placeholder="아이디">
+              </div>
+              <div class="login-input-wr login-input-wr-pw">
+                <input type="password" name="" id="" class="login-input" placeholder="비밀번호">
+                <button type="button" class="pw-show-btn"></button>
+              </div>
+              <div class="check-wr withdrawal-check-wr">
+                <input type="checkbox" name="" id="keepLogin">
+                <label for="keepLogin">로그인 상태 유지</label>
+              </div>
+            </div>
+            <div class="login-btns">
+              <button type="submit" class="btn-login">로그인 하기</button>
+              <ul class="login-links">
+                <li class="login-link">
+                  <a href="">아이디 찾기</a>
+                </li>
+                <li class="login-link">
+                  <a href="">비밀번호 찾기</a>
+                </li>
+                <li class="login-link">
+                  <a href="/member/signup1.html">회원가입</a>
+                </li>
+              </ul>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer 임시 인클루드 {-->
+  <div id="footer-loaction"></div>
+  <!-- } footer 임시 인클루드 -->
+
+  <script>
+    // 비밀번호 보이기/숨기기
+    $('.pw-show-btn').on('click', function(){
+      const pwBox = $(this).closest('.login-input-wr-pw');
+      const pwInput = pwBox.find('input');
+      pwBox.toggleClass('show');
+      if(pwBox.hasClass('show')) {
+        pwInput.attr('type', 'text');
+      } else {
+        pwInput.attr('type', 'password');
+      }
+    });
+  </script>
+
+</body>
+
+</html>
