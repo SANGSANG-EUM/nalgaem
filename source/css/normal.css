@@ -382,6 +382,12 @@ html, body {scroll-behavior: smooth;}
 .sub-paging-li.end {margin-left: 10px;}
 .sub-paging-li.next {margin-left: 20px;}
 
+/* 검색결과 */
+.search-result-wr {padding: clamp(40px, 5.3vw, 100px) 0 clamp(60px, 6.8vw, 130px); text-align: center;}
+.search-result {font-size: 3.375rem; font-weight: 500; color: #0f0f0f; line-height: 1.2;}
+.search-result b {font-weight: 800;}
+.search-tit-num {font-size: 1.625rem; font-weight: 500;}
+
 /* 날갬투어 */
 .quick-banner {position: fixed; top: 70%; transform: translateY(100%); right: 0; z-index: 100; width: clamp(70px, 10vw, 110px); height: clamp(70px, 10vw, 110px);}
 .sub-main-wr:not(:last-child) {padding-bottom: 75px;}
