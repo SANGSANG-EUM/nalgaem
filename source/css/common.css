@@ -62,6 +62,8 @@ select.nalgaem-input:required:invalid {color: #CCCCCC;}
 .nalgaem-input option[value=""][disabled] {display:none;}
 
 /* input width */
+.w200 {max-width: 200px;}
+.w280 {max-width: 280px;}
 .w380 {max-width: 380px;}
 .w500 {max-width: 500px;}
 .w700 {max-width: 700px;}
@@ -69,7 +71,7 @@ select.nalgaem-input:required:invalid {color: #CCCCCC;}
 /* file */
 /* .file-input {position: absolute; width: 0; height: 0; opacity: 0; visibility:hidden; padding: 0; margin: 0;} */
 .file-input {display: none;}
-.file-btn {display: flex; align-items: center; justify-content: center; width: 70px; height: 34px; font-size: 14px; font-weight: 400; color: #666; border-radius: 0.3rem; border: 1px solid #e5e5e5;}
+.file-btn {display: flex; align-items: center; justify-content: center; width: 70px; height: 34px; font-size: 14px; font-weight: 400; color: #666; border-radius: 0.3rem; border: 1px solid #e5e5e5; cursor: pointer;}
 
 /* cut text */
 .cut_text{

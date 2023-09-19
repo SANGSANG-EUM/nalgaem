@@ -478,7 +478,7 @@ html, body {scroll-behavior: smooth;}
 .nalgaem-view-content-type.map {height: clamp(200px, 30vw, 500px);}
 .nalgaem-view-content-type.map .root_daum_roughmap, .nalgaem-view-content-type.map .root_daum_roughmap .wrap_map {width: 100%; height: 100%;}
 .nalgaem-view-content-type.map .root_daum_roughmap .border1, .nalgaem-view-content-type.map .root_daum_roughmap .border2, .nalgaem-view-content-type.map .root_daum_roughmap .border3, .nalgaem-view-content-type.map .root_daum_roughmap .border4 {display: none;}
-.nalgaem-btn-list {display: flex; align-items: center; justify-content: center; margin: auto; width: 200px; height: 60px; font-weight: 500; color: #333; border-radius: 30px; border: 1px solid #666; background-color: #fff;}
+.nalgaem-btn-list {display: flex; align-items: center; justify-content: center; margin: auto; width: 200px; height: 60px; font-weight: 500; color: #333; border-radius: 30px; border: 1px solid #666; background-color: #fff; transition: .2s;}
 .nalgaem-btn-list img {margin-right: 12px; width: 12px;}
 
 /* 날갬카페 */
@@ -803,6 +803,8 @@ html, body {scroll-behavior: smooth;}
 .reg-write-wr .mypage-region-li {width: calc(100% / 6 - 50px / 6);}
 
 /* 완료 */
+.sub.complete {display: flex; align-items: center; justify-content: center; min-height: 94vh;}
+.sub.complete .regwr {padding-top: 5vw; padding-bottom: 5vw;}
 .member-tit.complete-tit {padding-bottom: clamp(5px, 1.6vw, 30px);}
 .complete-logo {display: block; width: 224px; margin: 0 auto 40px;}
 .complete-wr {padding-top: clamp(8px, 1.8vw, 35px); text-align: center; border-top: 1px solid #999;}
@@ -812,6 +814,19 @@ html, body {scroll-behavior: smooth;}
 .complete-btn-wr {display: flex; justify-content: center; align-items: center; gap: 0 15px; margin-top: clamp(15px, 3vw, 55px);}
 .nalgaem-btn-list.black {background-color: #333; border-color: #333; color: #fff;}
 .complete-btn-wr .nalgaem-btn-list {margin: 0;}
+
+/* 입점신청 */
+.store-write-wr .mypage-list-li-l {width: 220px;}
+.store-write-wr .mypage-list-li-r {width: calc(100% - 220px);}
+.mypage-box-under-ul {padding: 15px 30px 0;}
+
+/* 아이디. 비밀번호 찾기 */
+.sub.find {padding-bottom: clamp(100px, 20vw, 360px);}
+.id-find-txt1 {font-weight: 400; color: #666;}
+.result-write-wr .mypage-list-li {gap: 0 60px; align-items: center;}
+.result-write-wr .mypage-list-li-l, .result-write-wr .mypage-list-li-r {width: auto; padding: 5px 0;}
+.id-find-txt1 {position: relative;}
+.id-find-txt1::after {content: ''; position: absolute; right: -30px; top: 50%; transform: translateY(-50%); width: 1px; height: 15px; background-color: #E9E9E9;}
 
 /* 마이페이지 */
 .mypage {padding-top: 100px;}
@@ -838,7 +853,7 @@ html, body {scroll-behavior: smooth;}
 .mypage-box{}
 .mypage-box-cnt {border-top: 2px solid #333;}
 .mypage-box-tit {font-size: 1.5rem; font-weight: 600; color: #0f0f0f;}
-.mypage-box-tit-wr {display: flex; align-items: flex-end; justify-content: space-between; padding-bottom: 10px;}
+.mypage-box-tit-wr {display: flex; align-items: flex-end; justify-content: space-between; padding-bottom: 13px;}
 .mypage-bigtxt {font-size: 1.25rem; font-weight: 400; color: #0F0F0F;}
 .mypage-nortxt {font-weight: 400; color: #999;}
 .mypage-666txt {font-weight: 400; color: #666;}
@@ -963,6 +978,7 @@ html, body {scroll-behavior: smooth;}
 .mypage-qna-ul .mypage-list-li:last-child {border-color: #333;}
 .file-wr {display: flex; align-items: flex-start; gap: 0 20px; margin-top: 5px;}
 .file-txt-li {display: flex; align-items: center; gap: 0 16px; height: 34px; color: #999; }
+.file-txt-li p {word-break: break-all; line-height: 1;}
 .file-delete-btn {width: 22px; height: 22px; background-color: #F4F4F4; border-radius: 0.2rem; border: 0;}
 .file-delete-btn span {display: block; position: relative; width: 22px; height: 22px; rotate: 45deg;}
 .file-delete-btn span::after, .file-delete-btn span::before {content: ''; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #aaa;}
@@ -984,4 +1000,4 @@ html, body {scroll-behavior: smooth;}
 .nalgaem-view-vote-cnt-in.bf .nalgaem-view-vote-btn:hover {background-color: #333; border-color: #333; color: #fff;}
 /* .location-find-btn:hover {background-color: #aaa;} */
 .nalgaem-event-box:hover .nalgaem-event-img img {scale: 1.02;}
-.mypage-submit-btn:hover {background-color: #00E8E8; border-color: #00E8E8; color: #fff;}
+.mypage-submit-btn:hover, .nalgaem-btn-list:hover, .nalgaem-btn-list.black:hover {background-color: #00E8E8; border-color: #00E8E8; color: #fff;}

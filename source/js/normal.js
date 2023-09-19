@@ -162,7 +162,7 @@ $(document).ready(function () {
 
   // 헤더 메뉴 오버
   if ($(window).width() > 1440) {
-    $('body').on('mouseenter', '.hd-gnb-li', function () {
+    $('body').on('mouseenter focus', '.hd-gnb-li', function () {
       $(this).find('.hd-gnb2-ul').stop().slideDown(200);
     });
     $('body').on('mouseleave','.hd-gnb-li', function () {
@@ -172,7 +172,7 @@ $(document).ready(function () {
 
 
   // 헤더 검색버튼
-  $('body').on('click', '.hd-sch-open', function () {
+  $('body').on('click focus', '.hd-sch-open', function () {
     if ($('.hd-tnb-li--sch').hasClass('on')) {
       $('.hd-sch-form').stop().fadeOut();
       $('.hd-tnb-li--sch').removeClass('on');
@@ -193,7 +193,7 @@ $(document).ready(function () {
   }
 
   // 헤더 언어 변경
-  $('body').on('click', '.hd-lang-btn', function () {
+  $('body').on('click focus', '.hd-lang-btn', function () {
     $('.hd-lang-ul').stop().slideToggle();
   });
 
@@ -208,7 +208,7 @@ $(document).ready(function () {
   }
 
   // 헤더 마이페이지 버튼
-  $('body').on('click', '.gotoMypage', function () {
+  $('body').on('click focus', '.gotoMypage', function () {
     $('.hd-my-ul').stop().slideToggle();
   });
 
