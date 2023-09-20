@@ -73,6 +73,9 @@
   /* main */
   .place-sl-num {font-size: 4.5rem;}
 
+  /* 검색결과 */
+  .search-result {font-size: 2.5rem;}
+
   /* 날갬투어 상세 */
   .nalgaem-view-top-li > * {font-size: 1rem; gap: 3px;}
 
@@ -150,7 +153,7 @@
   .place-slider-wr {position: relative;}
   .place-slider {margin: 0; padding: 50px 3vw;}
   .place-arrow {top: auto; bottom: 0;}
-  .place-sl-inner {padding: 25px 15px; height: clamp(240px, 30vh, 350px);}
+  .place-sl-inner {padding: 25px 15px 20px; height: clamp(240px, 30vh, 350px);}
   .place-slide.swiper-slide-next + .place-slide {top: -30px;}
   .place-slider-wr.slide--0 .place-slide:nth-child(3) {top: -25px;}
 
@@ -166,6 +169,9 @@
   .sub-visual-txt2 {padding-top: 1vw; font-size: max(14px, 1.5vw);}
   .sub-visual-bg {padding: 0 10%;}
 
+  /* 검색결과 */
+  .search-tit-num {font-size: 1.3rem;}
+
   /* 날갬투어 */
   .region-sl-img {width: clamp(60px, 10vw, 80px); height: clamp(60px, 10vw, 80px);}
   .region-sl-txt {font-size: 1rem;}
@@ -173,7 +179,7 @@
   .region-slider {margin: 0 55px; padding-left: 0;}
   .region-arrow {top: clamp(30px, 5vw, 40px);}
   .sub-cate-li a {font-size: 1.25rem;}
-
+  .sub-main-tit {font-size: 1.8rem;}
   .place-card-li {width: calc(100% / 2 - 1.5vw / 2);}
 
   /* 날갬투어 상세 */
@@ -203,7 +209,6 @@
   .sub-cafe-sl-info {padding-top: clamp(5px, 3vw, 10px);}
   .sub-cafe-sl-wr::after {font-size: 8vw; left: 50%; transform: translateX(-50%); width: 100%; text-align: center;}
   .cafe-card-li {width: calc(100% / 2 - 1.5vw / 2);}
-
   
   /* 날갬카페 상세 */
   .nalgaem-view-top-li.call {display: block;}
@@ -225,6 +230,35 @@
   .cafe-opt-pop-li-txt-wr {padding-bottom: 8px;}
   .cafe-opt-icon {font-size: 12px;}
   .radio-wr input[type=radio] + label:before, .check-wr input[type=checkbox] + label:before {top: -4.2px;}
+
+  /* 공지사항 */
+  .tbl_wrap table td {padding: 15px 0;}
+  .tbl_wrap table .board-number, .tbl_wrap table .board-subject {font-size: 1rem;} 
+  .tbl_wrap table .board-date {font-size: 0.9rem;}
+
+  /* 이벤트 */
+  .nalgaem-event-wr {display: flex; flex-wrap: wrap; gap: 30px 2vw;}
+  .nalgaem-event-box {width: calc(100% / 3 - 4vw / 3);}
+  .nalgaem-event-img {border-radius: 3vw;}
+  .nalgaem-event-box.end .nalgaem-event-img::after {font-size: 1.125rem;}
+  .nalgaem-event-tit {padding: 10px 5px 3px; font-size: 1.125rem;}
+  .nalgaem-event-info {padding: 0 5px; font-size: 0.9rem;}
+
+  /* FAQ */
+  .faq-q {padding: 2.5vw 50px 2.5vw 0;}
+  .faq-a {padding: 2.5vw 4vw;}
+  .faq-q-tit {font-size: 1.125rem;}
+  .faq-q-icon {margin-top: 0;}
+
+  /* view */
+  .nalgaem-read-info {gap: 20px;}
+  .nalgaem-read-share::after {left: -10px; height: 10px;}
+  .nalgaem-read-subj-wr {padding-bottom: 10px;}
+  .nalgaem-read-subj {font-size: 1.6rem;}
+  .nalgaem-read-date, .nalgaem-read-share {font-size: 0.9rem;}
+  .nalgaem-read-share img {margin: 0 5px -3px 0; width: 20px;}
+  .read-list-wr {padding: 15px 0;}
+  .nalgaem-read-content {padding: clamp(25px, 3vw, 50px) min(1vw, 10px) clamp(25px, 4vw, 80px) ;}
 }
 
 @media screen and (max-width:767px){
@@ -277,8 +311,15 @@
   .sub-paging-li.circle a {width: 35px; height: 35px;}
   .sub-paging-li.circle a img {height: 15px;}
 
+  /* 검색결과 */
+  .search-result {font-size: 1.8rem;}
+  .search-tit-num {font-size: 1rem; font-weight: 700;}
+
   /* 날갬투어 */
   .circle-arrow {width: 35px; height: 35px; background-size: 8px !important;}
+  .sub-main-tit {font-size: 1.6rem;}
+  .sub-main-tit-wr {padding: 0 0 15px;}
+  .sub-sch-wr {max-width: calc(100% - 18vw); margin: auto;}
 
   /* 날갬투어 상세 */
   .nalgaem-view-top-ul {gap: 0 10px;}
@@ -361,6 +402,18 @@
   .location-result-cate {font-size: 12px;}
   .location-me span {font-size: 1.125rem;}
   .location-result-ul {height: calc(100% - 34px);}
+
+  /* 공지사항 */
+  .tbl_wrap {padding-top: 0;}
+  .nalgaem-event-tit, .nalgaem-event-box.end .nalgaem-event-img::after {font-size: 1rem;}
+
+  /* FAQ */
+  .faq-li {padding: 0;}
+  .faq-q {gap: 0 10px; padding: 3vw; padding-right: 30px; background-size: 12px; background-position: center right 2vw;}
+  .faq-q-tit {font-size: 1rem;}
+  .faq-a-inner {gap: 0 10px;}
+  .faq-a {padding: 2vw 3vw; border-radius: 0.4rem;}
+  .faq-q-icon {margin-top: -2px;}
 }
 
 @media screen and (max-width:480px){
@@ -414,14 +467,14 @@
   .cafe-sl-info {padding: 15px 15px 20px; min-height: 130px;}
 
   .place-sl-mark-wr {margin-top: 0;}
-  .live-fav-btn {width: 47px; height: 47px;}
+  .live-fav-btn {width: 45px; height: 45px;}
 
   /* sub */
   .sub {margin-top: 50px; padding-bottom: 20vw;}
 
   .sub-main-wr:not(:last-child) {padding-bottom: 15vw;}
   /* .sub-main-tit-wr {flex-direction: column; align-items: flex-start;} */
-  .sub-main-tit {font-size: 1.8rem;}
+  .sub-main-tit {font-size: 1.35rem;}
   .sub-main-more {margin-bottom: 0;}
 
   .sub-paging-li.circle a {width: 30px; height: 30px;}
@@ -431,19 +484,24 @@
   .sub-paging-li.end {margin-left: 5px;}
   .sub-paging-li.next {margin-left: 10px;}
   
-
+  /* 검색결과 */
+  .search-result {font-size: 1.35rem;}
+  .search-tit-num {font-size: 0.9rem; font-weight: 700;}
 
   /*  날갬투어 */
   .region-slider {margin: 0 calc(5px + 12vw);}
   .sub-cate-li a::after {width: 7px; height: 7px; top: -12px;}
+  .sub-sch-btn {width: 30px; height: 30px; background-size: 15px;}
 
-  .place-sl-field {border-radius: 1.7rem 0 1.7rem 0;}
+  .place-sl-field {padding: 5.5px 17.5px; border-radius: 1.7rem 0 1.7rem 0; font-size: 0.9rem}
   .place-card-ul {gap: 5vw;}
   .place-card-li {width: 100%;}
   .card-icon-wr {gap: 6px;}
   .place-sl-mark {width: 35px; height: 35px;}
-  .place-sl-inner {padding-top: 60px; border-radius: 1.7rem; height: auto;}
+  .place-sl-inner {padding-top: 60px; border-radius: 1.55rem; height: auto;}
   .quick-banner {top: auto; bottom: 3vw; right: 0; transform: translate(0);}
+  .place-sl-condition, .place-sl-mark {font-size: 0.9rem;}
+  .place-sl-sky-wr .place-sl-sky {font-size: 1.25rem;}
 
   .sub-list-order-ul {gap: 0 15px;}
   .sub-list-order-li:not(:last-child)::after {right: -8px;}
@@ -460,7 +518,7 @@
 
   /* 날갬카페 */
   .cafe-sl-hash {font-size: 12px;}
-  .cafe-sl-inner {border-radius: 1.7rem;}
+  .cafe-sl-inner {border-radius: 1.55rem;}
   .cafe-card-li {width: 100%;}
   .cafe-card-ul {gap: 5vw;}
 
@@ -493,8 +551,9 @@
   .cafe-opt-pop-btn {padding: 4px 8px; min-width: 50px; font-size: 12px;}
   .cafe-opt-pop-img {display: none;}
   .cafe-opt-pop {padding: 5px 5px 20px;}
-  .radio-wr input[type=radio] + label:before, .check-wr input[type=checkbox] + label:before {width: 16px; height: 16px; top: -2.15px;}
+  .radio-wr input[type=radio] + label:before, .check-wr input[type=checkbox] + label:before {width: 16px; height: 16px; top: -2.5px;}
   .radio-wr input[type=radio] + label, .check-wr input[type=checkbox] + label {padding-left: 25px;}
+  .radio-wr input[type=radio]:checked + label:after {left: 4px; top: 1px; width: 10px; height: 10px;}
   .cafe-opt-pop-ul-wr, .cafe-opt-pop-total-wr {padding: 0 5px;}
   .cafe-opt-pop-ul-wr {max-height: 50vh;}
   .cafe-opt-pop-top {margin: 0 5px;}
@@ -521,6 +580,19 @@
   .location-result-ul {height: calc(100% - 31px);}
   .location-sidebar.close {bottom:  clamp(-350px, -60vh, -200px);}
   .location-find-btn {top: 60px;}
+
+  /* 공지사항 */
+  .tbl_wrap table .board-number {display: none;}
+  .tbl_wrap table tr.notice td {background-color: #f9f9f9;}
+  .tbl_wrap table .board-subject {padding-right: 10px;}
+
+  /* 이벤트 */
+  .nalgaem-event-box {width: 100%;}
+  .nalgaem-event-img {height: 50vw;}
+  .nalgaem-event-tit, .nalgaem-event-box.end .nalgaem-event-img::after {font-size: 1.25rem;}
+
+  /* view */
+  .nalgaem-read-subj-wr {flex-direction: column; align-items: flex-start; gap: 5px 0;}
 }
 
 
