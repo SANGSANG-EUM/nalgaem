@@ -131,9 +131,14 @@
   .sub-cafe-sl-btm .cafe-sl-hash-wr {padding: max(20px, 2vw) 0;}
   .cafe-card-ul {gap: 1.5vw;}
   .cafe-card-li {width: calc(100% / 4 - (1.5vw * 3) / 4);}
-  .cafe-card-li .cafe-sl-img {height: max(100px, 15vw);}
+  .cafe-card-li .cafe-sl-img, .sub-card-li .cafe-sl-img {height: max(100px, 15vw);}
   .cafe-card-li .cafe-sl-info {padding: 10px 15px 15px;}
   .cafe-card-li .cafe-sl-hash-wr {padding-top: 10px;}
+
+  /* 마이페이지 메인 */
+  .mypage-inner {flex-direction: column; gap: clamp(20px, 8vw, 40px) 0;}
+  .mypage-aside-ul {flex-direction: row; gap: 0 5vw;}
+  .mypage-cnt-wr {width: 100%;}
 }
 
 @media screen and (max-width:1023px){
@@ -246,7 +251,7 @@
 
   /* FAQ */
   .faq-q {padding: 2.5vw 50px 2.5vw 0;}
-  .faq-a {padding: 2.5vw 4vw;}
+  .faq-a, .mypage-qna-cnt {padding: 2.5vw 4vw;}
   .faq-q-tit {font-size: 1.125rem;}
   .faq-q-icon {margin-top: 0;}
 
@@ -259,6 +264,37 @@
   .nalgaem-read-share img {margin: 0 5px -3px 0; width: 20px;}
   .read-list-wr {padding: 15px 0;}
   .nalgaem-read-content {padding: clamp(25px, 3vw, 50px) min(1vw, 10px) clamp(25px, 4vw, 80px) ;}
+
+  /* 회원가입 */
+  .member-tit {font-size: 2.5rem;}
+  .sign-agree-box-top {padding: 20px;}
+  .sign-agree-box-cnt-in {padding: 0 20px; height: 27vw;}
+  .sign-agree-box-top .check-wr input[type=checkbox] + label {font-size: 1rem;}
+  .sign-agree-box-top .check-wr input[type=checkbox] + label:before {top: -3px;}
+  .mypage-region-ul {gap: 10px;}
+  .reg-write-wr .mypage-region-ul, .mypage-region-ul {padding: 15px 0;}
+
+  /* 완료 */
+  .sub.complete {padding-top: 10vh; min-height: 60vh;}
+
+  /* 마이페이지 */
+  .mypage-top-info-l {min-width: 0; padding: 30px;}
+  .mypage-top-gretting {font-size: 1.25rem;}
+  .mypage-tit {font-size: 2.8rem;}
+  
+  /* 마이페이지 메인 */
+  .mypage-card-ul {gap: 2vw;}
+  .mypage-card-li:last-child {display: none;}
+  .mypage-card-li {width: calc(100% / 2 - 2vw / 2);}
+
+  /* 마이페이지 정보수정 */
+  .mypage-region-li {width: calc(100% / 7 - 75px / 7);}
+
+  /* 마이페이지 주문내역 */
+  .mypage-order-check-l, .mypage-order-check-r {padding: 10px 20px;}
+  .mypage-order-check-l {gap: 0 2vw;}
+  .nalgaem-input.input-date {padding-right: 30px;}
+  
 }
 
 @media screen and (max-width:767px){
@@ -402,6 +438,7 @@
   .location-result-cate {font-size: 12px;}
   .location-me span {font-size: 1.125rem;}
   .location-result-ul {height: calc(100% - 34px);}
+  .location-top-wr .sub-sch-wr {max-width: 100%;}
 
   /* 공지사항 */
   .tbl_wrap {padding-top: 0;}
@@ -414,6 +451,59 @@
   .faq-a-inner {gap: 0 10px;}
   .faq-a {padding: 2vw 3vw; border-radius: 0.4rem;}
   .faq-q-icon {margin-top: -2px;}
+
+  /* 회원가입 */
+  .member-tit {font-size: 2rem;}
+  .mypage-list-li {flex-direction: column; gap: 7px 0;}
+  .mypage-list-li-l, .mypage-list-li-r {width: 100%;}
+  .mypage-list-li-l-txt1 {padding: 0;}
+  .mypage-list-li-r {gap: 5px 0;}
+  .reg-write-wr .mypage-region-ul, .mypage-region-ul {gap: 1vw;}
+  .reg-write-wr .mypage-region-li {width: calc(100% / 5 - 4vw / 5);}
+
+  /* 입점신청 */
+  .store-write-wr .mypage-list-li-l, .store-write-wr .mypage-list-li-r {width: 100%;}
+  .file-wr {margin-top: 0;}
+
+  /* 완료 */
+  .compltet-txt-wr {gap: 5px 0;}
+  .complete-txt1 {font-size: 1.4rem;}
+  .complete-txt2 {font-size: 1rem;}
+
+  /* 아이디찾기 */
+  .id-find-txt1::after {display: none;}
+
+  /* 마이페이지 */
+  .mypage-top-gretting br {display: block;}
+  .mypage-top-name {font-size: 0.9rem;}
+  .mypage-top-info-l, .mypage-top-info-r, .mypage-top-edit {padding: 30px;}
+  .myhash-wr {margin-top: 5px;}
+  .myhash {font-size: 0.8rem;}
+  .mypage-top-wr {position: relative;}
+  .mypage-top-edit {position: absolute; padding: 0; top: 10px; right: 10px;}
+
+  /* 마이페이지 메인 */
+  .nalgaem-table th, .nalgaem-table td {padding: 10px;}
+  .nalgaem-table td {width: auto; font-size: 14px;}
+  .nalgaem-table col {width: auto !important;}
+  .order-table col:nth-child(1), .order-table th:nth-child(1), .order-table td:nth-child(1) {display: none;}
+  .icon-status {font-size: 12px;}
+  .mypage-main-qna-txt {font-size: 0.9rem; text-indent: -0.35rem;  margin-left: 0.8rem;}
+  .mypage-qna-hidden .mypage-qna-inner {padding: 0 0 10px;}
+  .mypage-qna-cnt {gap: 0 10px;}
+
+  /* 마이페이지 정보수정 */
+  .mypage-region-li {width: calc(100% / 5 - 4vw / 5);}
+
+  /* 마이페이지 탈퇴 */
+  .withdrawal-check-ul {padding: 10px 0 0;}
+  .mypage-withdrawal-in {padding: 10px 10px 20px;}
+
+  /* 마이페이지 주문내역 */
+  .mypage-order-check-in {flex-direction: column; gap: 10px; padding: 20px;}
+  .mypage-order-check-l, .mypage-order-check-r {padding: 0; width: 100%;}
+  .mypage-order-check-r {justify-content: flex-end;}
+  
 }
 
 @media screen and (max-width:480px){
@@ -494,7 +584,7 @@
   .sub-sch-btn {width: 30px; height: 30px; background-size: 15px;}
 
   .place-sl-field {padding: 5.5px 17.5px; border-radius: 1.7rem 0 1.7rem 0; font-size: 0.9rem}
-  .place-card-ul {gap: 5vw;}
+  .place-card-ul {gap: 3vw;}
   .place-card-li {width: 100%;}
   .card-icon-wr {gap: 6px;}
   .place-sl-mark {width: 35px; height: 35px;}
@@ -571,9 +661,9 @@
   .location-result-wr, .location-top-wr {flex: auto;}
   .location-top-wr {width: 100%; height: 150px; gap: 10px; padding: 0 10px 20px; flex-shrink: 0;}
   .location-result-wr {width: 100%; height: calc(100% - 150px); flex-shrink: 0;}
-  .location-cate-img {width: 35px; height: 35px;}
+  /* .location-cate-img {width: 35px; height: 35px;} */
   .location-cate-img img {height: 60%;}
-  .location-cate-txt {top: calc(100% + 4px); font-size: 12px;}
+  .location-cate-txt {top: calc(100% + 4px); font-size: 12px; font-weight: 500;}
   .location-me img {width: 12px;}
   .location-me span {font-size: 1rem;}
   .location-cate-wr {justify-content: flex-start; gap: 5vw;}
@@ -593,6 +683,89 @@
 
   /* view */
   .nalgaem-read-subj-wr {flex-direction: column; align-items: flex-start; gap: 5px 0;}
+
+  /* 로그인 */
+  .login-box {padding: 10vw 8vw;}
+  .btn-login {margin: 20px 0;}
+  .login-input {height: 40px;}
+  .login-input-wr-pw {margin-top: 5px;}
+
+  /* 회원가입 */
+  .member-tit {font-size: 1.6rem;}
+  .mypage-box-tit-wr {padding-bottom: 5px;}
+  .mypage-box-tit {font-size: 1.35rem;}
+  .sign-agree-box {border-radius: 1rem;}
+  .sign-agree-box-top .check-wr input[type=checkbox] + label:before {top: -1px;}
+  .sign-agree-box-top {padding: 10px;}
+  .sign-agree-box-cnt {padding: 10px 5px;}
+  .sign-agree-box-cnt-in {padding: 0 5px;}
+  .mypage-list-li {padding: 15px 0;}
+  .nalgaem-input {padding: 0 10px; height: 40px;}
+  .my-mini-btn {width: 85px; height: 40px;}
+  .mypage-bigtxt {font-size: 1.125rem;}
+  .reg-write-wr .mypage-region-li {width: calc(100% / 3 - 2vw / 3);}
+  .mypage-region-li input[type="checkbox"] + label {height: 35px;}
+  .mypage-list-li {gap: 4px 0;}
+  
+  /* 입점신청 */
+  .file-wr {gap: 0 10px;}
+  .file-txt-li {gap: 0 10px;}
+  .mypage-box-under-ul {padding: 10px 0 0;}
+
+  /* 완료 */
+  .nalgaem-btn-list {width: 130px; height: 40px;}
+  .complete-btn-wr {gap: 0 2vw;}
+  .complete-txt1 {font-size: 1.25rem;}
+
+  /* 마이페이지 */
+  .mypage-top-gretting {font-size: 1.125rem;}
+  .mypage-top-wr {padding: 20px 15px;}
+  .mypage-top-info {flex-direction: column; align-items: flex-start;}
+  .mypage-top-info-l, .mypage-top-info-r, .mypage-top-edit {padding: 0;}
+  .mypage-top-info-r {padding-top: 10px;}
+  .mypage-top-info-r::after {display: none;}
+  .myhash-wr {}
+  .myhash {font-weight: 500;}
+  .mypage-top-gretting br {display: none;}
+  .mypage-top-edit {top: 15px; right: 15px;}
+  .mypage-top-name {margin-top: 3px;}
+  .mypage-tit {font-size: 2.2rem;}
+
+  /* 마이페이지 메인 */
+  .mypage-card-ul {flex-direction: column; gap: 3vw 0;}
+  .mypage-card-li {width: 100%;}
+  .order-table col:nth-child(3), .order-table th:nth-child(3), .order-table td:nth-child(3) {display: none;}
+  .nalgaem-table th {font-size: 13px;}
+  .nalgaem-table td {font-size: 12px;}
+  .nalgaem-table th, .nalgaem-table td {padding: 10px 5px;}
+  .icon-status {padding: 2px 8px; font-size: 10px;}
+  .mypage-main-qna-box {flex-direction: column; align-items: center; text-align: center; gap: 5px ;}
+  .mypage-main-qna-txt {margin-left: 0; text-indent: 0;}
+  .mypage-main-qna-txt::before {display: none;}
+  
+  /* 마이페이지 정보수정 */
+  .mypage-region-li {width: calc(100% / 3 - 2vw / 3);}
+
+  /* 마이페이지 회원탈퇴 */
+  .mypage-withdrawal-in {padding: 10px 0;}
+  .withdrawal-txt {padding-top: 10px;}
+  .withdrawal-memo-li-l {width: 100px; padding-right: 10px; height: 40px;}
+  .withdrawal-memo-li-r {width: calc(100% - 100px);}
+  .withdrawal-check-ul {padding-top: 5px;}
+
+  /* 마이페이지 관심목록 */
+  .mypage-category-li a {padding: 4px 12px;}
+
+  /* 마이페이지 주문내역 */
+  .mypage-order-check-r {gap: 2.5vw;}
+  .mypage-order-check-in {padding: 5px;}
+  .nalgaem-input.input-date {padding-right: 20px; background-size: 16px; background-position: center right 5px;}
+  .mypage-order-check-in .my-mini-btn {width: 60px; height: 30px;}
+  .order-period-input-wr {gap: 3px;}
+  .pop-close-btn {top: 15px; right: 15px;}
+  .mypage-order-top-info {flex-direction: column; align-items: flex-start; margin: 5px 0 10px;}
+  .mypage-order-pop-li {padding: 10px 0;}
+
 }
 
 

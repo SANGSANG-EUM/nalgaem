@@ -71,7 +71,6 @@ $(document).ready(function () {
   });
 
 
-
   function getTextColorByBackgroundColor(hexColor) {
 
     const c = hexColor.substring(1) // 색상 앞의 # 제거
@@ -208,6 +207,81 @@ $(document).ready(function () {
     // },
   });
 
+  // 헤더 메뉴 오버
+  if ($(window).width() > 1440) {
+    $('body').on('mouseenter focus', '.hd-gnb-li', function () {
+      $(this).find('.hd-gnb2-ul').stop().slideDown(200);
+    });
+    $('body').on('mouseleave', '.hd-gnb-li', function () {
+      $(this).find('.hd-gnb2-ul').stop().slideUp(200);
+    });
+  }
+
+
+  // 헤더 검색버튼
+  $('body').on('click', '.hd-sch-open', function () {
+    if ($('.hd-tnb-li--sch').hasClass('on')) {
+      $('.hd-sch-form').stop().fadeOut();
+      $('.hd-tnb-li--sch').removeClass('on');
+    } else {
+      $('.hd-sch-form').stop().fadeIn();
+      $('.hd-tnb-li--sch').addClass('on');
+    };
+  });
+
+  // 헤더 검색영역 외 클릭시 검색박스 사라짐
+  if ($(window).width() > 1440) {
+    $(document).on('mouseup focusout', function (e) {
+      if ($(".hd-tnb-li--sch").has(e.target).length === 0) {
+        $('.hd-sch-form').stop().fadeOut();
+        $('.hd-tnb-li--sch').removeClass('on');
+      }
+    });
+  }
+
+  // 헤더 언어 변경
+  $('body').on('click', '.hd-lang-btn', function () {
+    $('.hd-lang-ul').stop().slideToggle();
+  });
+
+  // 헤더 언어 버튼 외 클릭시 검색박스 사라짐
+  // if ($(window).width() > 1440) {
+  $(document).on('mouseup focusout', function (e) {
+    if ($(".hd-tnb-li--lang").has(e.target).length === 0) {
+      $('.hd-lang-ul').stop().fadeOut();
+      $('.hd-tnb-li--lang').removeClass('on');
+    }
+  });
+  // }
+
+  // 헤더 마이페이지 버튼
+  $('body').on('click', '.gotoMypage', function () {
+    $('.hd-my-ul').stop().slideToggle();
+  });
+
+  // 헤더 마이페이지 버튼 외 클릭시 검색박스 사라짐
+  // if ($(window).width() > 1440) {
+  $(document).on('mouseup focusout', function (e) {
+    if ($(".hd-tnb-li--login").has(e.target).length === 0) {
+      $('.hd-my-ul').stop().fadeOut();
+      $('.hd-tnb-li--login').removeClass('on');
+    }
+  });
+  // }
+
+  // 모바일 헤더
+  $('body').on('click', '.hd-ham', function () {
+    if ($(this).hasClass('on')) {
+      $(this).removeClass('on');
+      $('.hd-menu').fadeOut();
+      $('.hd-gnb2-ul').slideUp();
+      $('.hd-gnb-li').removeClass('open');
+
+    } else {
+      $(this).addClass('on');
+      $('.hd-menu').fadeIn();
+    }
+  });
 
 
 });
