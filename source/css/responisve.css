@@ -145,6 +145,7 @@
   .foot-app-link {width: auto; padding: 0 min(5vw, 20px)}
   .main-foot-top::before {width: min(15vw, 80px); height: min(15vw, 80px);}
   .main-foot-top::before {top: 50%;}
+  .cafe-fix-bar.abs {bottom: -100px;}
 
   /* main */
   .notice-sl-date {font-size: 0.9rem;}
@@ -252,7 +253,7 @@
   .faq-q {padding: 2.5vw 50px 2.5vw 0;}
   .faq-a, .mypage-qna-cnt {padding: 2.5vw 4vw;}
   .faq-q-tit {font-size: 1.125rem;}
-  .faq-q-icon {margin-top: 0;}
+  .faq-q-icon, .faq-a-icon {margin-top: 0;}
 
   /* view */
   .nalgaem-read-info {gap: 20px;}
@@ -308,6 +309,8 @@
   .foot-app-link {font-size: max(14px, 3vw); height: max(30px, 7vw); width: auto; ;}
   .foot-app-link img {width: 4vw;}
   .foot-info, .foot-copyright {font-size: 0.9rem;}
+  .main-foot-top {top: auto; bottom: 10vw; right: 3vw; animation: none;}
+  .cafe-fix-bar.abs {bottom: -85px;}
 
   /* main */
   .mainvs-inner {top: 50%;}
@@ -327,6 +330,7 @@
   .calendar-arrow {top: 11.5px; width: 40px; height: 40px;}
   .calendar-date {font-size: 1.5rem;}
   .calendar-day {font-size: 0.9rem; line-height: 1;}
+  .notice-wr .main-tit-wr {text-align: center;}
 
   .place-sl-num {font-size: 2.5rem;}
   .place-slider::before {right: 45%; bottom: 3%;}
@@ -409,8 +413,8 @@
   .menu-mo-slider {display: block; position: fixed; top: 60px; left: 0; width: 100%; background-color: #fff; opacity: 0; height: 0; padding: 0; transition: opacity .3s;}
   .menu-mo-slider.on {opacity: 1; height: auto; padding: 10px 3vw;}
   /* .menu-mo-slider > .swiper-wrapper {gap: 0 5px; overflow-x: auto;} */
-  .menu-mo-slide {padding: 6.5px 15.5px; width: auto; border-radius: 50px; border: 1px solid #e5e5e5;}
-  .menu-mo-slide a {font-weight: 500;}
+  .menu-mo-slide {padding: 4px 16.5px; width: auto; border-radius: 50px; border: 1px solid #e5e5e5;}
+  .menu-mo-slide a {font-weight: 500; font-size: 14px;}
   .menu-mo-slide.on {background-color: #333;}
   .menu-mo-slide.on a {color: #fff;}
   /* .menu-mo-slide:first-child {margin-left: 3vw;}
@@ -454,7 +458,7 @@
   .faq-q-tit {font-size: 1rem;}
   .faq-a-inner {gap: 0 10px;}
   .faq-a {padding: 2vw 3vw; border-radius: 0.4rem;}
-  .faq-q-icon {margin-top: -2px;}
+  .faq-q-icon, .faq-a-icon {margin-top: -2px;}
 
   /* 회원가입 */
   .member-tit {font-size: 2rem;}
@@ -527,7 +531,6 @@
   /* .hd-tnb-li--login a {font-size: 1.4rem;} */
 
   /* footer */
-  .main-foot-top {top: auto; bottom: 10vw; right: 3vw; animation: none;}
   .foot-box {padding-top: clamp(10px, 5vh, 40px); padding-bottom: min(5vh, 40px);}
   .sub-foot::after {right: 3vw;}
 
@@ -582,7 +585,7 @@
   .search-result {font-size: 1.35rem;}
   .search-tit-num {font-size: 0.9rem; font-weight: 700;}
 
-  /*  날갬투어 */
+  /* 날갬투어 */
   .region-slider {margin: 0 calc(5px + 12vw);}
   .sub-cate-li a::after {width: 7px; height: 7px; top: -12px;}
   .sub-sch-btn {width: 30px; height: 30px; background-size: 15px;}
@@ -656,6 +659,7 @@
   .anchor {scroll-margin-top: 80px;}
   .menu-mo-slider {top: 50px;}
   .menu-mo-slider.on {padding: 5px 3vw;}
+  .menu-mo-slide {padding: 3px 15px;}
   .menu-mo-slide a {font-size: 0.9rem;}
 
   /* 내위치찾기 */
@@ -668,11 +672,12 @@
   /* .location-cate-img {width: 35px; height: 35px;} */
   .location-cate-img img {height: 60%;}
   .location-cate-txt {top: calc(100% + 4px); font-size: 12px; font-weight: 500;}
+  .location-me {justify-content: center;}
   .location-me img {width: 12px;}
   .location-me span {font-size: 1rem;}
-  .location-cate-wr {justify-content: flex-start; gap: 5vw;}
+  .location-cate-wr {justify-content: center; gap: 5vw;}
   .location-result-ul {height: calc(100% - 31px);}
-  .location-sidebar.close {bottom:  clamp(-350px, -60vh, -200px);}
+  .location-sidebar.close {bottom: clamp(-500px, -60vh, -200px);}
   .location-find-btn {top: 60px;}
 
   /* 공지사항 */
@@ -684,6 +689,9 @@
   .nalgaem-event-box {width: 100%;}
   .nalgaem-event-img {height: 50vw;}
   .nalgaem-event-tit, .nalgaem-event-box.end .nalgaem-event-img::after {font-size: 1.25rem;}
+
+  /* FAQ */
+  .faq-q-icon, .faq-a-icon {margin-top: -1px;}
 
   /* view */
   .nalgaem-read-subj-wr {flex-direction: column; align-items: flex-start; gap: 5px 0;}
@@ -703,13 +711,15 @@
   .sign-agree-box-top {padding: 10px;}
   .sign-agree-box-cnt {padding: 10px 5px;}
   .sign-agree-box-cnt-in {padding: 0 5px;}
-  .mypage-list-li {padding: 15px 0;}
+  .mypage-list-li {padding: 10px 0;}
   .nalgaem-input {padding: 0 10px; height: 40px;}
   .my-mini-btn {width: 85px; height: 40px;}
-  .mypage-bigtxt {font-size: 1.125rem;}
+  .mypage-bigtxt {font-size: 1.1rem;}
   .reg-write-wr .mypage-region-li {width: calc(100% / 3 - 2vw / 3);}
   .mypage-region-li input[type="checkbox"] + label {height: 35px;}
   .mypage-list-li {gap: 4px 0;}
+  .file-btn {font-size: 12px; width: 60px; height: 30px;}
+  .file-txt-li {height: 30px;}
   
   /* 입점신청 */
   .file-wr {gap: 0 10px;}
@@ -769,6 +779,7 @@
   .pop-close-btn {top: 15px; right: 15px;}
   .mypage-order-top-info {flex-direction: column; align-items: flex-start; margin: 5px 0 10px;}
   .mypage-order-pop-li {padding: 10px 0;}
+  .mypage-order-check-txt {font-size: 12px;}
 
 }
 

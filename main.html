@@ -140,14 +140,7 @@
   </header>
 
   <!-- 인트로페이지 { -->
-  <div class="intro-page on no-drag">
-    <div class="intro-circle"></div>
-    <p class="intro-down-txt">SCROLL DOWN</p>
-    <div class="mainvs-txt-wr">
-      <p class="mainvs-txt black">
-        나와 함께 즐거운 라이브 속으로! <br> 날씨 갬성, Nal-Gaem <img src="/source/img/icon-flower_sky.png" alt="">
-      </p>
-    </div>
+  <div class="intro-wr">
   </div>
   <!-- } 인트로페이지 -->
 
@@ -156,13 +149,13 @@
       <div class="mainsec mainsec-1">
         <div class="swiper mainvs-slider">
           <div class="swiper-wrapper">
-            <div class="swiper-slide mainvs-slide">
+            <div class="swiper-slide mainvs-slide mainvs-slide-1">
               <img src="/source/img/img-mainvisual1.jpg" alt="">
             </div>
-            <div class="swiper-slide mainvs-slide">
+            <div class="swiper-slide mainvs-slide mainvs-slide-2">
               <img src="https://picsum.photos/id/94/2000/1000" alt="">
             </div>
-            <div class="swiper-slide mainvs-slide">
+            <div class="swiper-slide mainvs-slide mainvs-slide-3">
               <img src="https://picsum.photos/id/10/2000/1000" alt="">
             </div>
           </div>
@@ -202,8 +195,19 @@
             <div class="swiper-slide live-slide">
               <div class="live-sl-video">
                 <img src="https://img.youtube.com/vi/MljpuzHfXWw/sddefault.jpg" alt="" class="live-sl-thumb"></img>
-                <iframe src="https://www.youtube.com/embed/MljpuzHfXWw?si=-ppSWAigKFswswe0?enablejsapi=1"
-                  title="YouTube video player" frameborder="0"
+                <iframe src="https://www.youtube.com/embed/MljpuzHfXWw?si=-ppSWAigKFswswe0?enablejsapi=1" title="YouTube video player" frameborder="0"       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <button type="button" class="live-fav-btn"><span class="sound_only">즐겨찾기</span></button>
+                <div class="live-info-wr">
+                  <span class="live-temperature">28˚</span>
+                  <span class="live-weather">맑음</span>
+                </div>
+              </div>
+              <p class="live-sl-tit">영상 타이틀 표시</p>
+            </div>
+            <div class="swiper-slide live-slide">
+              <div class="live-sl-video">
+                <img src="https://img.youtube.com/vi/MljpuzHfXWw/sddefault.jpg" alt="" class="live-sl-thumb"></img>
+                <iframe src="https://www.youtube.com/embed/MljpuzHfXWw?si=-ppSWAigKFswswe0" title="YouTube video player" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen></iframe>
                 <button type="button" class="live-fav-btn"><span class="sound_only">즐겨찾기</span></button>
@@ -217,23 +221,7 @@
             <div class="swiper-slide live-slide">
               <div class="live-sl-video">
                 <img src="https://img.youtube.com/vi/MljpuzHfXWw/sddefault.jpg" alt="" class="live-sl-thumb"></img>
-                <iframe src="https://www.youtube.com/embed/MljpuzHfXWw?si=-ppSWAigKFswswe0" title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen></iframe>
-                <button type="button" class="live-fav-btn"><span class="sound_only">즐겨찾기</span></button>
-                <div class="live-info-wr">
-                  <span class="live-temperature">28˚</span>
-                  <span class="live-weather">맑음</span>
-                </div>
-              </div>
-              <p class="live-sl-tit">영상 타이틀 표시</p>
-            </div>
-            <div class="swiper-slide live-slide">
-              <div class="live-sl-video">
-                <img src="https://img.youtube.com/vi/MljpuzHfXWw/sddefault.jpg" alt="" class="live-sl-thumb"></img>
-                <iframe src="https://www.youtube.com/embed/MljpuzHfXWw?si=-ppSWAigKFswswe0" title="YouTube video player"
-                  frameborder="0"
+                <iframe src="https://www.youtube.com/embed/MljpuzHfXWw?si=-ppSWAigKFswswe0" title="YouTube video player" frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                   allowfullscreen></iframe>
                 <button type="button" class="live-fav-btn"><span class="sound_only">즐겨찾기</span></button>
