@@ -88,7 +88,6 @@
   /* 날갬카페 상세 */
   .cafe-menu-ul {gap: 15px; padding: 15px 0;}
   .cafe-menu-li {width: calc(100% / 4 - 45px / 4);}
-
 }
 
 @media screen and (max-width:1290px){
@@ -416,6 +415,11 @@
   .menu-mo-slide.on a {color: #fff;}
   /* .menu-mo-slide:first-child {margin-left: 3vw;}
   .menu-mo-slide:last-child {margin-right: 3vw;} */
+
+  .nalgaem-view-txt-tb th, .nalgaem-view-txt-tb td {display: block; width: 100%; padding: 0;}
+  .nalgaem-view-txt-tb th {padding-bottom: 3px;}
+  .nalgaem-view-txt-tb tr {display: block;}
+  .nalgaem-view-txt-tb tr:not(:last-child) {padding-bottom: 10px;}
 
   /* 내위치찾기 */
   .location-sidebar {display: flex; width: 100%; left: 0; bottom: calc(-250px); width: 100%; height: 250px;}
