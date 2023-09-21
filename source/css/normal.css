@@ -24,6 +24,9 @@ html, body {scroll-behavior: smooth;}
   100% {bottom: 105px;}
 }
 
+/* loading */
+.loading {display: flex; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(255, 255, 255, 1); z-index: 9999; display: none;}
+
 /* header */
 .header {position: fixed; top: 0; left: 0; width: 100%; z-index: 400; transition: .3s;}
 .hd-wr {display: flex; align-items: center; justify-content: space-between; width: min(100%, calc(1720px + 6vw)); padding: 0 3vw; margin: auto; height: 80px; }
@@ -87,6 +90,8 @@ html, body {scroll-behavior: smooth;}
 
 /* main */
 .mainsec .fp-tableCell {padding-top: 5vh;}
+
+/* .mainvs-slide-1 {background: url('/source/img/img-mainvisual1.jpg') no-repeat center / cover;} */
 
 .no-drag {-webkit-user-select:none; -moz-user-select:none; -ms-user-select:none; user-select:none}
 .mainvs-txt-wr {position: absolute; top: 48vh; left: 50vw; transform: translate(-50%, -50%); padding: 0 3vw; width: 100%; font-size: 4rem; font-weight: 700; line-height: 1.3125; z-index: 10;}
@@ -152,6 +157,7 @@ html, body {scroll-behavior: smooth;}
 .live-sl-ctr-wr {padding-top: 13vh;}
 .main-sl-fr-wr {font-weight: 400; color: #999;}
 .main-sl-fr-wr .swiper-pagination-current {color: #0f0f0f;}
+.live-sl-thumb {opacity: 0; transition: .2s;}
 .live-slide.swiper-slide-active {transform: translateY(-10px) scale(1.5); z-index: 10;}
 .live-slide.swiper-slide-active .live-fav-btn {display: block;}
 .live-slide.swiper-slide-active .live-sl-tit {padding-top: 8px; font-size: 0.9rem;}
@@ -315,7 +321,7 @@ html, body {scroll-behavior: smooth;}
 .mainsec-6 .fp-tableCell {padding-top: 0;}
 .main-foot {padding-top: calc(80px + 3vh); height: 100%;}
 .main-foot > .wrapper {display: flex; flex-direction: column; justify-content: space-between; height: 100%;}
-.main-foot .foot-tit-wr {padding-top: clamp(30px, 6.25vw, 120px)}
+.main-foot .foot-tit-wr {padding-top: clamp(100px, 10vw, 120px)}
 
 .sub-foot {position: relative;}
 .sub-foot::after {content: ''; position: absolute; top: max(-10vw, -60px); right: 20vw; width: min(20vw, 120px); height: min(20vw, 120px); background: url('/source/img/circle-liveweather.png')no-repeat center / contain; animation: circle 12s infinite linear;}
@@ -967,7 +973,7 @@ html, body {scroll-behavior: smooth;}
 .mypage-order-pop-li {display: flex; align-items: center; justify-content: space-between; padding: 20px 0;}
 .mypage-order-pop-li:not(:last-child) {border-bottom: 1px solid #ececec;}
 .mypage-order-pop-li-l {display: flex; align-items: center; gap: 0 15px;}
-.mypage-order-pop-btm {display: flex; justify-content: flex-end; padding-top: 16px; border-top: 2px solid #333;}
+.mypage-order-pop-btm {display: flex; justify-content: flex-end; padding-top: clamp(5px, 2vw, 16px); border-top: 2px solid #333;}
 .mypage-order-top-num {font-weight: 400;}
 .mypage-order-pop-ul {max-height: 50vh; overflow-y: auto;}
 .mypage-order-pop-ul::-webkit-scrollbar {width: 6px; height: 6px; scrollbar-width: 6px; scrollbar-height: 6px;}

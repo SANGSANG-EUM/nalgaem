@@ -1,40 +1,4 @@
 $(document).ready(function () {
-
-  // 날갬 상세 텍스트 간격 정리
-  if ($(window).width() > 1023) {
-    // Get all .nalgaem-view-content-li elements
-    const liElements = document.querySelectorAll('.nalgaem-view-content-li');
-
-    // Loop through each .nalgaem-view-content-li
-    liElements.forEach(li => {
-      // Get all .nalgaem-view-content-txtbox2-l elements within the current li
-      const lElements = li.querySelectorAll('.nalgaem-view-content-txtbox2-l span');
-
-      // Initialize a variable to store the maximum width within this li
-      let maxWidth = 0;
-
-      // Loop through .nalgaem-view-content-txtbox2-l elements to find the maximum width within this li
-      lElements.forEach(l => {
-        const lWidth = l.offsetWidth;
-        if (lWidth > maxWidth) {
-          maxWidth = lWidth;
-
-          console.log(maxWidth);
-        }
-      });
-
-      // Set the width of all .nalgaem-view-content-txtbox2-l elements within the current li to the maximum width within this li
-      lElements.forEach(l => {
-        l.style.width = `${maxWidth + 1}px`;
-      });
-
-
-      // Reset the maxWidth for the next iteration
-      maxWidth = 0;
-    });
-  }
-
-
   // 동일 박스 높이
   $(".match_h > *").matchHeight();
 
@@ -119,44 +83,69 @@ $(document).ready(function () {
     }
   });
 
+  // 메인페이지 라이브 동영상
+  // 2초 뒤에 live-sl-thumb 클래스를 가진 모든 이미지의 opacity를 1로 변경합니다.
+  setTimeout(function () {
+    var delayedImages = document.querySelectorAll('.live-sl-thumb');
+    delayedImages.forEach(function (image) {
+      image.style.opacity = '1';
+    });
+  }, 500);
 
   // 인트로페이지
-  $('.intro-page').addClass('on');
+  // 세션 스토리지에서 방문 여부 확인
+  var visited = sessionStorage.getItem("visited");
 
-  if ($('.intro-page').hasClass('on')) {
-    $('body, html, .container').addClass('scroll-lock');
+  if (!visited) {
 
-    $('body').on('scroll touchmove mousewheel wheel DOMMouseScroll', function (event) {
-      event.preventDefault();
-      event.stopPropagation();
-      return false;
-    });
+    $('.loading').css('display', 'none');
 
-    $('.intro-page').on('scroll touchmove mousewheel wheel DOMMouseScroll', function () {
-      $(this).addClass('animation');
+    $('.intro-wr').html(`<div class="intro-page on no-drag"><div class="intro-circle"></div><p class="intro-down-txt">SCROLL DOWN</p><div class="mainvs-txt-wr"><p class="mainvs-txt black">나와 함께 즐거운 라이브 속으로! <br> 날씨 갬성, Nal-Gaem <img src="/source/img/icon-flower_sky.png" alt=""></p></div></div>`)
+    $('.intro-page').addClass('on');
 
-      // setTimeout(function () {
-      //   $('.intro-page .mainvs-txt.black img').css('opacity', '0').stop(0).attr('src', './source/img/icon-flower_white.png').animate({
-      //     opacity: 1
-      //   }, 500);
-      // }, 1000);
+    if ($('.intro-page').hasClass('on')) {
+      $('body, html, .container').addClass('scroll-lock');
 
+      $('body').on('scroll touchmove mousewheel wheel DOMMouseScroll', function (event) {
+        event.preventDefault();
+        event.stopPropagation();
+        return false;
+      });
+
+      $('.intro-page').on('scroll touchmove mousewheel wheel DOMMouseScroll', function () {
+        $(this).addClass('animation');
+
+        // setTimeout(function () {
+        //   $('.intro-page .mainvs-txt.black img').css('opacity', '0').stop(0).attr('src', './source/img/icon-flower_white.png').animate({
+        //     opacity: 1
+        //   }, 500);
+        // }, 1000);
+
+        // 메인 슬라이드 다운 이미지
+        $('.mainvs-scroll-down').css('opacity', '0').stop(0).animate({
+          opacity: 1
+        }, 1000);
+
+        // 애니메이션이 끝난 뒤 스크롤락 해제
+        setTimeout(function () {
+          $('body, html, .container').removeClass('scroll-lock');
+          $('body').off('scroll touchmove mousewheel wheel DOMMouseScroll');
+          $('.intro-page').removeClass('on');
+        }, 2000);
+      });
+
+    } else {
+      $('body, html, .container').removeClass('scroll-lock');
+      $('body').off('scroll touchmove mousewheel wheel DOMMouseScroll');
+    }
+
+    // 방문 여부를 세션 스토리지에 저장
+    sessionStorage.setItem("visited", "yes");
+  } else {
       // 메인 슬라이드 다운 이미지
       $('.mainvs-scroll-down').css('opacity', '0').stop(0).animate({
         opacity: 1
       }, 1000);
-
-      // 애니메이션이 끝난 뒤 스크롤락 해제
-      setTimeout(function () {
-        $('body, html, .container').removeClass('scroll-lock');
-        $('body').off('scroll touchmove mousewheel wheel DOMMouseScroll');
-        $('.intro-page').removeClass('on');
-      }, 2000);
-    });
-
-  } else {
-    $('body, html, .container').removeClass('scroll-lock');
-    $('body').off('scroll touchmove mousewheel wheel DOMMouseScroll');
   }
 
 
@@ -282,6 +271,7 @@ $(document).ready(function () {
       $('.hd-menu').fadeIn();
     }
   });
+
 
 
 });
