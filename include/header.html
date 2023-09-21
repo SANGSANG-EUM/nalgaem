@@ -14,13 +14,16 @@
                 <a href="/sub/tour_sight.html">관광지</a>
               </li>
               <li class="hd-gnb2-li">
+                <a href="">문화시설</a>
+              </li>
+              <li class="hd-gnb2-li">
                 <a href="">축제</a>
               </li>
               <li class="hd-gnb2-li">
-                <a href="">공연</a>
+                <a href="">행사</a>
               </li>
               <li class="hd-gnb2-li">
-                <a href="">행사</a>
+                <a href="">공연</a>
               </li>
             </ul>
           </li>
@@ -96,7 +99,7 @@
             </ul>
           </li>
           <li class="hd-tnb-li hd-tnb-li--store">
-            <a href="">입점 신청<img src="/source/img/icon-link.png" alt=""></a>
+            <a href="/member/store_enter.html">입점 신청<img src="/source/img/icon-link.png" alt=""></a>
           </li>
         </ul>
       </div>
@@ -104,3 +107,39 @@
     <button type="button" class="hd-ham"></button>
   </div>
 </header>
+
+<script>
+  // 모바일 메뉴 드롭다운
+  const screenWidth = window.innerWidth;
+  const submenuItems = document.querySelectorAll(".hd-gnb-li .hd-gnb2-ul");
+
+  // 미디어 쿼리의 최대 너비를 1440px로 설정합니다.
+  const maxScreenWidth = 1440;
+
+  // 화면 너비가 1440px 이하인 경우에만 작업을 수행합니다.
+  if (screenWidth <= maxScreenWidth) {
+    submenuItems.forEach(submenuItem => {
+      // 부모 요소인 .hd-gnb-li에 has-submenu 클래스 추가합니다.
+      submenuItem.closest(".hd-gnb-li").classList.add("has-submenu");
+
+      // 부모 요소인 .hd-gnb-li의 하위 a 태그의 href 속성을 변경합니다.
+      const linkElement = submenuItem.closest(".hd-gnb-li").querySelector("a");
+      linkElement.setAttribute("href", "javascript:void(0);");
+
+    });
+  }
+
+  if ($(window).width() < 1441) {
+    $('.hd-gnb-li a').on('click', function () {
+      if ($(this).closest('.hd-gnb-li').hasClass('open')) {
+        $('.hd-gnb-li').removeClass('open');
+        $('.hd-gnb2-ul').slideUp();
+
+      } else {
+        $('.hd-gnb2-ul').slideUp();
+        $(this).closest('.hd-gnb-li').addClass('open');
+        $(this).closest('.has-submenu').find('.hd-gnb2-ul').slideDown();
+      }
+    });
+  }
+</script>
