@@ -150,7 +150,9 @@ html, body {scroll-behavior: smooth;}
 .live-fav-btn {width: 60px; height: 60px; border-radius: 50%; background: #00E7BD url('/source/img/icon-star.png') no-repeat center / 50%; border: 0; transition: .2s; z-index: 10;}
 .mainsec-2 .live-fav-btn {position: absolute; top: 0; right: 0; width: 40px; height: 40px; display: none;}
 .live-fav-btn img {width: 18.5px;}
-.live-info-wr {position: absolute; left: 25px; bottom: 5px; color: #fff; opacity: 0; transition: .2s; z-index: 10;}
+.live-info-wr, .live-pm-wr {display: inline-block; position: absolute; left: 25px; bottom: 5px; color: #fff; opacity: 0; transition: .2s; z-index: 10;}
+.live-info-wr {left: 25px;}
+.live-pm-wr {right: 25px; text-align: right;}
 .live-temperature {font-size: 2.1rem; font-weight: 700;}
 .live-weather {font-size: 1.1rem; font-weight: 600;}
 .live-sl-tit {padding-top: 12px; font-size: 1.125rem; font-weight: 500; color: #0f0f0f; text-align: center;}
@@ -161,7 +163,7 @@ html, body {scroll-behavior: smooth;}
 .live-slide.swiper-slide-active {transform: translateY(-10px) scale(1.5); z-index: 10;}
 .live-slide.swiper-slide-active .live-fav-btn {display: block;}
 .live-slide.swiper-slide-active .live-sl-tit {padding-top: 8px; font-size: 0.9rem;}
-.live-slide.swiper-slide-active .live-info-wr {opacity: 1;}
+.live-slide.swiper-slide-active .live-info-wr , .live-slide.swiper-slide-active .live-pm-wr {opacity: 1;}
 .live-slider.slide--0 {padding: calc(2vh + 10px) 3vw 0; max-width: 1600px; margin: 0 auto;}
 .live-slider.slide--0 .swiper-slide {flex: 1; max-width: 700px;}
 
@@ -1012,7 +1014,7 @@ html, body {scroll-behavior: smooth;}
 /* .place-sl-inner:hover .place-sl-img::after {background-color: rgba(0, 0, 0, 0);} */
 .cafe-sl-inner:hover .cafe-sl-img img {scale: 1.05;}
 .tnb-li > a:hover {background-color: #f7f7f7;}
-.live-sl-video:hover .live-info-wr {display: none;}
+.live-sl-video:hover .live-info-wr, .live-sl-video:hover .live-pm-wr {display: none;}
 .sub-cate-li a:hover {color: #0f0f0f;}
 .sub-cate-li a:hover::before {opacity: 1; width: 100%;}
 .nalgaem-view-vote-cnt-in.bf .nalgaem-view-vote-btn:hover {background-color: #333; border-color: #333; color: #fff;}
