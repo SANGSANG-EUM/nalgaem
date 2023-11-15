@@ -242,6 +242,7 @@ html, body {scroll-behavior: smooth;}
 .place-sl-img img {position: absolute; width: 100%; height: 100%; left: 50%; top: 50%; transform: translate(-50%, -50%); object-fit: cover;}
 .place-sl-img::after {content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, .3); transition: .2s;}
 .place-sl-info-wr {position: relative; z-index: 5; color: #fff;}
+.place-sl-condition-wr {display: flex; align-items: center; gap: min(1vw, 8px);}
 .place-sl-condition {display: inline-block; padding: 6px 13.5px; font-weight: 400; border: 1px solid #fff; border-radius: 20px; line-height: 1;}
 .place-sl-weather-wr {display: flex; align-items: center; gap: 10px;}
 .place-sl-temperature {font-size: 3.75rem; font-weight: 700;}
